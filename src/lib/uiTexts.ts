@@ -19,6 +19,7 @@ export type UiTexts = {
   footer: {
     tagline: string;
     note: string;
+    discord: string;
   };
 };
 
@@ -34,6 +35,7 @@ export const uiTexts: Record<Locale, UiTexts> = {
     footer: {
       tagline: "© open-knm，欢迎开源共享。",
       note: "为准备在荷兰生活、学习与工作的你而写。",
+      discord: "加入 Discord 社区讨论",
     },
   },
   en: {
@@ -47,6 +49,7 @@ export const uiTexts: Record<Locale, UiTexts> = {
     footer: {
       tagline: "© open-knm — open knowledge for expats.",
       note: "Written for people living, studying, or working in the Netherlands.",
+      discord: "Join our Discord Community",
     },
   },
 };

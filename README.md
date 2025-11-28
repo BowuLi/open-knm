@@ -6,6 +6,7 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+[![Discord](https://img.shields.io/discord/131182024512345678?color=5865F2&label=Discord&logo=discord&logoColor=white)](https://discord.gg/9SaFjrhN)
 
 **[中文]** | [English](#english)
 

@@ -24,6 +24,11 @@ export function SiteLayout({ children, locale }: SiteLayoutProps) {
     { href: getLocalizedPath(locale, "/about"), label: texts.nav.about, isAccent: true },
   ];
 
+  const aiAssistantLink = {
+    href: getLocalizedPath(locale, "/ai-assistant"),
+    label: texts.nav.assistant,
+  };
+
   return (
     <div
       lang={locale}
@@ -55,6 +60,19 @@ export function SiteLayout({ children, locale }: SiteLayoutProps) {
                 </Link>
               ))}
             </nav>
+
+            <div className="hidden md:block h-6 w-[1px] bg-slate-200"></div>
+
+            <Link
+              href={aiAssistantLink.href}
+              className="hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-slate-900 to-slate-800 px-4 py-1.5 text-sm font-bold text-white shadow-md shadow-slate-900/20 transition-all hover:scale-105 hover:shadow-lg hover:from-black hover:to-slate-900"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--primary)] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--primary)]"></span>
+              </span>
+              {aiAssistantLink.label}
+            </Link>
 
             {/* Mobile menu button */}
             <button
@@ -89,6 +107,21 @@ export function SiteLayout({ children, locale }: SiteLayoutProps) {
         {isMobileMenuOpen && (
           <div className="border-t border-slate-200 bg-white md:hidden">
             <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-6 py-3 text-sm font-medium text-slate-700">
+              <Link
+                 href={aiAssistantLink.href}
+                 className="flex items-center justify-between rounded-lg px-2 py-2 bg-slate-900 text-white mb-2 shadow-md"
+                 onClick={() => setIsMobileMenuOpen(false)}
+              >
+                 <span className="flex items-center gap-2 font-bold">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--primary)] opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--primary)]"></span>
+                    </span>
+                    {aiAssistantLink.label}
+                 </span>
+                 <span>→</span>
+              </Link>
+              
               {navLinks.map((item) => (
                 <Link
                   key={item.href}

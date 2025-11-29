@@ -22,7 +22,7 @@ export default async function KnmPage({
   const topicParam =
     typeof rawTopic === "string" ? rawTopic : Array.isArray(rawTopic) ? rawTopic[0] : undefined;
 
-  const topicKeys = ["history-geography", "law-government", "health-education", "work-income", "past-exam"] as const;
+  const topicKeys = ["history-geography", "law-government", "health-education", "work-income", "social-culture"] as const;
   type TopicKey = (typeof topicKeys)[number] | "all";
 
   const isValidTopic = (value: string | undefined): value is TopicKey =>
@@ -35,7 +35,7 @@ export default async function KnmPage({
     "law-government": ["Politics", "Law"],
     "health-education": ["Health", "Education"],
     "work-income": ["Work", "Finance"],
-    "past-exam": ["Past Exam", "Memoir"],
+    "social-culture": ["Culture"],
   };
 
   const filteredArticles =
@@ -51,7 +51,7 @@ export default async function KnmPage({
     { key: "law-government", zh: "法律与政府", en: "Law & Government" },
     { key: "health-education", zh: "医疗与教育", en: "Health & Education" },
     { key: "work-income", zh: "工作与收入", en: "Work & Income" },
-    { key: "past-exam", zh: "真题回忆", en: "Past Exam Memoir"}
+    { key: "social-culture", zh: "社交与文化", en: "Social & Culture" },
   ];
 
   return (
@@ -62,8 +62,8 @@ export default async function KnmPage({
         </h1>
         <p className="text-lg text-slate-600 leading-relaxed">
           {isZh
-            ? "这里汇集了 Kennis van de Nederlandse Maatschappij (KNM) 考试的核心考点。从历史、地理到法律与医疗，我们用双语为你拆解每一个必考话题。"
-            : "The core topics for the Kennis van de Nederlandse Maatschappij (KNM) exam. From history and geography to law and healthcare, we explain every essential topic bilingually."}
+            ? "这里汇集了 Kennis van de Nederlandse Maatschappij (KNM) 考试的核心考点。从历史、地理到法律与医疗，我们用双语为你拆解每一个必考话题。橙色标记的内容尤为重要，建议优先掌握。"
+            : "The core topics for the Kennis van de Nederlandse Maatschappij (KNM) exam. From history and geography to law and healthcare, we explain every essential topic bilingually. Orange highlights mark especially important content to prioritize."}
         </p>
       </div>
 

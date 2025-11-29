@@ -197,21 +197,6 @@ export const articles: Article[] = [
     ),
     tags: ["Culture"],
   },
-
-  // --- KNM: Past Exams ---
-  {
-    slug: "knm-past-exam-2025-11",
-    category: "knm",
-    titles: titleFor(
-      "KNM 考试真题回忆（2025 年 11 月）",
-      "KNM Exam Question Recall (Nov 2025)"
-    ),
-    descriptions: descFor(
-      "基于 2025 年 11 月考试的回忆，涵盖法律、医疗、工作等核心考点。",
-      "Recall from Nov 2025 exams covering law, healthcare, work, and more."
-    ),
-    tags: ["Past Exam", "Memoir"],
-  },
 ];
 
 export function getArticlesByCategory(category: Category): Article[] {

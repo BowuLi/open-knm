@@ -29,8 +29,6 @@ import KnmHealthMatZh from "@/data/articles/knm-healthcare-maternity.zh.mdx";
 import KnmHealthMatEn from "@/data/articles/knm-healthcare-maternity.en.mdx";
 import KnmSocialZh from "@/data/articles/knm-social-etiquette.zh.mdx";
 import KnmSocialEn from "@/data/articles/knm-social-etiquette.en.mdx";
-import KnmPastExam202511Zh from "@/data/articles/knm-past-exam-2025-11.zh.mdx";
-import KnmPastExam202511En from "@/data/articles/knm-past-exam-2025-11.en.mdx";
 
 type Props = {
   params: Promise<{ locale: Locale; slug: string }>;
@@ -84,10 +82,6 @@ const articleBodies: Record<string, Partial<Record<Locale, ComponentType>>> = {
   "knm-social-etiquette": {
     zh: KnmSocialZh,
     en: KnmSocialEn,
-  },
-  "knm-past-exam-2025-11": {
-    zh: KnmPastExam202511Zh,
-    en: KnmPastExam202511En,
   },
 };
 

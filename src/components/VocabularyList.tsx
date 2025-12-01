@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { Locale, uiTexts } from "@/lib/uiTexts";
 import { vocabularyList, VocabularyItem } from "@/data/vocabulary";
 
@@ -11,6 +11,24 @@ export default function VocabularyList({ locale }: { locale: Locale }) {
   
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const [currentPage, setCurrentPage] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      // Check screen width (standard tablet/mobile breakpoint)
+      const isMobileView = window.innerWidth < 768;
+      // Check user agent for mobile devices
+      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      setIsMobile(isMobileView || isMobileDevice);
+    };
+    
+    // Check on mount
+    checkIsMobile();
+    
+    // Check on resize
+    window.addEventListener('resize', checkIsMobile);
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
 
   const categories = [
     { id: "all", label: texts.categories.all },
@@ -53,7 +71,7 @@ export default function VocabularyList({ locale }: { locale: Locale }) {
           {texts.description}
         </p>
         <div className="text-sm text-slate-400 bg-amber-50 border border-amber-100 rounded-lg px-4 py-2 inline-block">
-          💡 {locale === 'zh' ? '听不到声音？请检查手机静音开关是否关闭。' : 'No sound? Check if your phone is in silent mode.'}
+          💡 {locale === 'zh' ? '手机端暂时不支持发音，想听发音请桌面端访问。' : 'Mobile audio is currently not supported. Please use desktop to listen.'}
         </div>
       </div>
 
@@ -77,7 +95,7 @@ export default function VocabularyList({ locale }: { locale: Locale }) {
       {/* Grid */}
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {visibleItems.map((item) => (
-          <VocabularyCard key={item.id} item={item} locale={locale} />
+          <VocabularyCard key={item.id} item={item} locale={locale} isMobile={isMobile} />
         ))}
       </div>
 
@@ -148,7 +166,7 @@ export default function VocabularyList({ locale }: { locale: Locale }) {
   );
 }
 
-function VocabularyCard({ item, locale }: { item: VocabularyItem; locale: Locale }) {
+function VocabularyCard({ item, locale, isMobile }: { item: VocabularyItem; locale: Locale; isMobile: boolean }) {
   const isZh = locale === 'zh';
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -156,6 +174,7 @@ function VocabularyCard({ item, locale }: { item: VocabularyItem; locale: Locale
     e.preventDefault();
     e.stopPropagation();
 
+    if (isMobile) return;
     if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
 
     // Cancel any ongoing speech
@@ -215,9 +234,14 @@ function VocabularyCard({ item, locale }: { item: VocabularyItem; locale: Locale
           </h3>
           <button
             onClick={handlePlay}
-            disabled={isPlaying}
-            aria-label="Play pronunciation"
-            className="p-2 rounded-full text-slate-400 hover:text-[var(--primary)] hover:bg-orange-50 transition-all active:scale-95 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2 disabled:opacity-50"
+            disabled={isPlaying || isMobile}
+            aria-label={isMobile ? "Audio not available on mobile" : "Play pronunciation"}
+            title={isMobile ? (isZh ? "手机端暂不支持发音" : "Audio not available on mobile") : ""}
+            className={`p-2 rounded-full transition-all active:scale-95 focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2 
+              ${isMobile 
+                ? "text-slate-200 cursor-not-allowed opacity-50" 
+                : "text-slate-400 hover:text-[var(--primary)] hover:bg-orange-50 disabled:opacity-50"
+              }`}
           >
             {isPlaying ? (
               <span className="flex space-x-1 h-4 items-center">
@@ -249,4 +273,3 @@ function VocabularyCard({ item, locale }: { item: VocabularyItem; locale: Locale
     </div>
   );
 }
-

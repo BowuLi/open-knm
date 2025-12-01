@@ -41,6 +41,11 @@ export type UiTexts = {
     title: string;
     text: string;
   };
+  articleNav: {
+    prev: string;
+    next: string;
+    home: string;
+  };
 };
 
 export const uiTexts: Record<Locale, UiTexts> = {
@@ -78,6 +83,11 @@ export const uiTexts: Record<Locale, UiTexts> = {
       title: "免责声明",
       text: "本站内容由 AI 基于收集资料辅助生成，仅供参考。尽管我们努力确保质量，但无法保证信息 100% 准确或最新。请务必以荷兰政府官方信息为准。",
     },
+    articleNav: {
+      prev: "上一篇",
+      next: "下一篇",
+      home: "回到主页",
+    },
   },
   en: {
     nav: {
@@ -112,6 +122,11 @@ export const uiTexts: Record<Locale, UiTexts> = {
     disclaimer: {
       title: "Disclaimer",
       text: "Content is generated with AI assistance based on collected data. While we strive for accuracy, we cannot guarantee it is 100% correct or up-to-date. Please verify with official sources.",
+    },
+    articleNav: {
+      prev: "Previous Article",
+      next: "Next Article",
+      home: "Back to Home",
     },
   },
 };

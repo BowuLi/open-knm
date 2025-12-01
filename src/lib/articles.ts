@@ -208,3 +208,16 @@ export function getArticlesByCategory(category: Category): Article[] {
 export function getArticleBySlug(slug: string): Article | undefined {
   return articles.find((article) => article.slug === slug);
 }
+
+export function getAdjacentArticles(slug: string): {
+  prev?: Article;
+  next?: Article;
+} {
+  const index = articles.findIndex((article) => article.slug === slug);
+  if (index === -1) {
+    return {};
+  }
+  const prev = index > 0 ? articles[index - 1] : undefined;
+  const next = index < articles.length - 1 ? articles[index + 1] : undefined;
+  return { prev, next };
+}

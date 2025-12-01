@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Locale, isLocale } from "@/lib/uiTexts";
-import { getArticleBySlug } from "@/lib/articles";
+import { getArticleBySlug, getAdjacentArticles } from "@/lib/articles";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { ComponentType } from "react";
 import { SITE_NAME, SITE_URL, absoluteUrl } from "@/lib/siteConfig";
+import { ArticleNavigation } from "@/components/ArticleNavigation";
 
 import KnmHistoryZh from "@/data/articles/knm-history-william-of-orange.zh.mdx";
 import KnmHistoryEn from "@/data/articles/knm-history-william-of-orange.en.mdx";
@@ -193,6 +194,8 @@ export default async function ArticlePage({ params }: Props) {
     },
   };
 
+  const { prev, next } = getAdjacentArticles(slug);
+
   return (
     <article className="max-w-3xl mx-auto py-8 sm:py-12 space-y-8">
       <script
@@ -255,6 +258,8 @@ export default async function ArticlePage({ params }: Props) {
           </div>
         )}
       </div>
+
+      <ArticleNavigation prev={prev} next={next} locale={locale} />
     </article>
   );
 }

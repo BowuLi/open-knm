@@ -770,31 +770,59 @@
     }
   },
   {
-    "id": "DigiD",
-    "dutch": "DigiD",
+    "id": "wachtwoord",
+    "dutch": "wachtwoord",
     "category": "admin",
     "level": "A2",
     "translations": {
-      "en": "Digital ID",
-      "zh": "电子身份认证 (DigiD)"
+      "en": "password",
+      "zh": "密码"
     },
     "notes": {
-      "en": "Your digital identity for government services (taxes, municipality, health). Don't share it!",
-      "zh": "你的电子身份证，用于登录政府网站（税务、市政、医保）。千万别分享给别人！"
+      "en": "Literally \"wait word\". Essential for logging into websites.",
+      "zh": "字面意是\"等待词\"。登录网站必备。"
     }
   },
   {
-    "id": "BSN",
-    "dutch": "BSN",
+    "id": "handtekening",
+    "dutch": "handtekening",
     "category": "admin",
     "level": "A2",
     "translations": {
-      "en": "Citizen Service Number",
+      "en": "signature",
+      "zh": "签名"
+    },
+    "notes": {
+      "en": "You need to put this at the bottom of contracts.",
+      "zh": "合同底部必须签这个。"
+    }
+  },
+  {
+    "id": "Burgerservicenummer",
+    "dutch": "Burgerservicenummer",
+    "category": "admin",
+    "level": "A2",
+    "translations": {
+      "en": "Citizen Service Number (BSN)",
       "zh": "公民服务号 (BSN)"
     },
     "notes": {
-      "en": "Unique number you get when registering. Needed for work, bank, healthcare.",
-      "zh": "注册地址时获得的唯一号码。工作、开户、看病都需要。"
+      "en": "The unique number for tax, work, and healthcare. Everyone calls it \"BSN\".",
+      "zh": "税务、工作和医疗必备的唯一号码。大家都叫它 \"BSN\"。"
+    }
+  },
+  {
+    "id": "Digitale Identiteit",
+    "dutch": "Digitale Identiteit",
+    "category": "admin",
+    "level": "A2",
+    "translations": {
+      "en": "Digital Identity (DigiD)",
+      "zh": "数字身份认证 (DigiD)"
+    },
+    "notes": {
+      "en": "Your online ID for government services. Everyone calls it \"DigiD\".",
+      "zh": "用于登录政府服务的在线ID。大家都叫它 \"DigiD\"。"
     }
   },
   {

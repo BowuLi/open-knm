@@ -39,8 +39,12 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         <div className="relative z-10">
           <div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center mb-8 border-b border-white/10 pb-8">
              <div className="relative">
-               <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[var(--primary)] to-orange-600 flex items-center justify-center text-3xl shadow-lg ring-4 ring-white/20">
-                 👨‍💻
+               <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg ring-4 ring-white/20 relative bg-slate-800">
+                 <img 
+                   src="/images/author.jpg" 
+                   alt="Author" 
+                   className="w-full h-full object-cover"
+                 />
                </div>
                <div className="absolute -bottom-1 -right-1 bg-white text-[10px] font-bold text-slate-900 px-2 py-0.5 rounded-full shadow-sm">
                  DEV
@@ -61,6 +65,10 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                   </a>
                   <a href="https://www.linkedin.com/in/li-xu-412015216/" target="_blank" className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0077b5]/20 hover:bg-[#0077b5]/40 text-[#0077b5] hover:text-white ring-1 ring-[#0077b5]/50 transition-all">
                     LinkedIn
+                  </a>
+                  <a href="https://x.com/HyperCodeTalker" target="_blank" className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black hover:bg-zinc-800 transition-colors text-white">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    X
                   </a>
                </div>
              </div>

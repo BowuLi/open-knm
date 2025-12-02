@@ -4,6 +4,7 @@ import { locales, Locale } from "@/lib/i18n";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Analytics } from "@vercel/analytics/react";
 import { SITE_URL } from "@/lib/siteConfig";
+import { PostHogProvider } from "@/components/PostHogProvider";
 
 const metadataPerLocale: Record<
   Locale,
@@ -120,10 +121,12 @@ export default async function RootLayout({
   return (
     <html lang={validLocale}>
       <body className="antialiased min-h-screen flex flex-col">
-        <SiteLayout locale={validLocale}>
-          {children}
-        </SiteLayout>
-        <Analytics />
+        <PostHogProvider>
+          <SiteLayout locale={validLocale}>
+            {children}
+          </SiteLayout>
+          <Analytics />
+        </PostHogProvider>
       </body>
     </html>
   );

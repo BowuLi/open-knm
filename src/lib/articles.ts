@@ -32,6 +32,19 @@ export const articles: Article[] = [
     tags: ["History", "Geography"],
   },
   {
+    slug: "knm-history-ww2",
+    category: "knm",
+    titles: titleFor(
+      "荷兰历史：二战与解放",
+      "History: World War II & Liberation"
+    ),
+    descriptions: descFor(
+      "德国入侵、安妮·弗兰克、饥饿之冬以及每年的死难者纪念日与解放日。",
+      "German invasion, Anne Frank, Hunger Winter, and Remembrance/Liberation Day."
+    ),
+    tags: ["History"],
+  },
+  {
     slug: "knm-geography-water-management",
     category: "knm",
     titles: titleFor(
@@ -181,6 +194,19 @@ export const articles: Article[] = [
     descriptions: descFor(
       "荷兰人的三吻礼、预约文化，以及邻里冲突的解决步骤。",
       "Three kisses, appointments, and solving neighbor disputes."
+    ),
+    tags: ["Culture"],
+  },
+  {
+    slug: "knm-culture-holidays",
+    category: "knm",
+    titles: titleFor(
+      "荷兰节日：国王节与传统",
+      "Culture: Holidays & Traditions"
+    ),
+    descriptions: descFor(
+      "国王节、Sinterklaas、以及必须知道的法定假日与传统。",
+      "King's Day, Sinterklaas, and essential public holidays & traditions."
     ),
     tags: ["Culture"],
   },

@@ -9,6 +9,8 @@ import { ArticleNavigation } from "@/components/ArticleNavigation";
 
 import KnmHistoryZh from "@/data/articles/knm-history-william-of-orange.zh.mdx";
 import KnmHistoryEn from "@/data/articles/knm-history-william-of-orange.en.mdx";
+import KnmHistoryWw2Zh from "@/data/articles/knm-history-ww2.zh.mdx";
+import KnmHistoryWw2En from "@/data/articles/knm-history-ww2.en.mdx";
 import KnmGeoZh from "@/data/articles/knm-geography-water-management.zh.mdx";
 import KnmGeoEn from "@/data/articles/knm-geography-water-management.en.mdx";
 import KnmPoliticsZh from "@/data/articles/knm-politics-democracy.zh.mdx";
@@ -31,6 +33,8 @@ import KnmHealthMatZh from "@/data/articles/knm-healthcare-maternity.zh.mdx";
 import KnmHealthMatEn from "@/data/articles/knm-healthcare-maternity.en.mdx";
 import KnmSocialZh from "@/data/articles/knm-social-etiquette.zh.mdx";
 import KnmSocialEn from "@/data/articles/knm-social-etiquette.en.mdx";
+import KnmHolidaysZh from "@/data/articles/knm-culture-holidays.zh.mdx";
+import KnmHolidaysEn from "@/data/articles/knm-culture-holidays.en.mdx";
 
 type Props = {
   params: Promise<{ locale: Locale; slug: string }>;
@@ -42,6 +46,10 @@ const articleBodies: Record<string, Partial<Record<Locale, ComponentType>>> = {
   "knm-history-william-of-orange": {
     zh: KnmHistoryZh,
     en: KnmHistoryEn,
+  },
+  "knm-history-ww2": {
+    zh: KnmHistoryWw2Zh,
+    en: KnmHistoryWw2En,
   },
   "knm-geography-water-management": {
     zh: KnmGeoZh,
@@ -86,6 +94,10 @@ const articleBodies: Record<string, Partial<Record<Locale, ComponentType>>> = {
   "knm-social-etiquette": {
     zh: KnmSocialZh,
     en: KnmSocialEn,
+  },
+  "knm-culture-holidays": {
+    zh: KnmHolidaysZh,
+    en: KnmHolidaysEn,
   },
 };
 

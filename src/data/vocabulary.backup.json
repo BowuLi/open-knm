@@ -70,20 +70,6 @@
     }
   },
   {
-    "id": "basisschool",
-    "dutch": "basisschool",
-    "category": "daily",
-    "level": "A2",
-    "translations": {
-      "en": "primary school",
-      "zh": "小学"
-    },
-    "notes": {
-      "en": "For children aged 4 to 12 (Groep 1 to Groep 8). Free, but schools ask for a voluntary parental contribution (ouderbijdrage).",
-      "zh": "4 至 12 岁儿童就读。学校本身免费，但会要求家长自愿支付杂费 (**ouderbijdrage**)。"
-    }
-  },
-  {
     "id": "bekeuring",
     "dutch": "bekeuring",
     "category": "daily",
@@ -305,20 +291,6 @@
     "notes": {
       "en": "Where you wait for the bus. Wave to stop the bus!",
       "zh": "等车的地方。记得招手让司机停车！"
-    }
-  },
-  {
-    "id": "buurthuis",
-    "dutch": "buurthuis",
-    "category": "daily",
-    "level": "A2",
-    "translations": {
-      "en": "community center",
-      "zh": "社区活动中心"
-    },
-    "notes": {
-      "en": "Place for neighborhood activities, often offering courses or multicultural markets.",
-      "zh": "供社区居民进行活动、学习课程或举行文化聚会的地方。"
     }
   },
   {
@@ -1204,20 +1176,6 @@
     }
   },
   {
-    "id": "openbaar-vervoer",
-    "dutch": "openbaar vervoer",
-    "category": "daily",
-    "level": "A2",
-    "translations": {
-      "en": "public transport",
-      "zh": "公共交通"
-    },
-    "notes": {
-      "en": "Bus, train, metro, tram. You must check in (inchecken) and check out (uitchecken) with your OV-chipkaart.",
-      "zh": "公共汽车、火车、地铁。必须使用 OV-chipkaart 打卡进入和打卡离开。"
-    }
-  },
-  {
     "id": "oranje",
     "dutch": "oranje",
     "category": "daily",
@@ -1568,20 +1526,6 @@
     }
   },
   {
-    "id": "sportvereniging",
-    "dutch": "sportvereniging",
-    "category": "daily",
-    "level": "A2",
-    "translations": {
-      "en": "sports club / association",
-      "zh": "体育俱乐部 / 运动协会"
-    },
-    "notes": {
-      "en": "Place where people play sports in their free time (vrije tijd). Members pay a contribution (contributie).",
-      "zh": "人们在业余时间运动的社团。会员需要支付会费 (**contributie**)。"
-    }
-  },
-  {
     "id": "stamppot",
     "dutch": "stamppot",
     "category": "daily",
@@ -1820,20 +1764,6 @@
     }
   },
   {
-    "id": "verzuimen",
-    "dutch": "verzuimen",
-    "category": "daily",
-    "level": "A2",
-    "translations": {
-      "en": "to be absent / truancy",
-      "zh": "缺课 / 旷课"
-    },
-    "notes": {
-      "en": "Missing school (wegblijven van school). If this happens, parents can be fined. Parents must request permission (aan de school vragen) for special leave.",
-      "zh": "无故缺课。家长可能因此被罚款。特殊情况必须事先向学校请假。"
-    }
-  },
-  {
     "id": "vinden",
     "dutch": "vinden",
     "category": "daily",
@@ -1901,20 +1831,6 @@
     "notes": {
       "en": "\"Ben je vrij?\" (Are you off work? / Are you free?).",
       "zh": "\"Ben je vrij?\" (你休息吗？/你有空吗？)。"
-    }
-  },
-  {
-    "id": "vrijwillig",
-    "dutch": "vrijwillig",
-    "category": "daily",
-    "level": "A2",
-    "translations": {
-      "en": "voluntary / optional",
-      "zh": "自愿的 / 非强制的"
-    },
-    "notes": {
-      "en": "Used for parental contribution (ouderbijdrage) to school or non-paid work (vrijwilligerswerk).",
-      "zh": "用于描述非强制性的捐款（如学校的杂费）或无偿工作。"
     }
   },
   {
@@ -2114,20 +2030,6 @@
     }
   },
   {
-    "id": "arbeidsovereenkomst",
-    "dutch": "arbeidsovereenkomst",
-    "category": "work",
-    "level": "A2",
-    "translations": {
-      "en": "employment contract",
-      "zh": "劳动合同"
-    },
-    "notes": {
-      "en": "Written agreement between employer and employee covering salary, hours, job duties (werkzaamheden), and whether it is fixed (vast) or temporary (tijdelijk).",
-      "zh": "书面合同。规定工作时间、工资、内容和合同期限（固定或临时）。"
-    }
-  },
-  {
     "id": "arbowet",
     "dutch": "Arbowet",
     "category": "work",
@@ -2139,20 +2041,6 @@
     "notes": {
       "en": "Requires employers to ensure a healthy and safe workplace.",
       "zh": "要求雇主确保员工拥有健康安全的工作场所的法律。"
-    }
-  },
-  {
-    "id": "bijscholen",
-    "dutch": "bijscholen",
-    "category": "work",
-    "level": "A2",
-    "translations": {
-      "en": "to retrain / further train",
-      "zh": "再培训 / 进修"
-    },
-    "notes": {
-      "en": "Taking a course (cursus) to update your skills for your current job (e.g., learning new computer skills).",
-      "zh": "为当前工作学习新技能，进行再培训。"
     }
   },
   {
@@ -2240,20 +2128,6 @@
     }
   },
   {
-    "id": "loonheffing",
-    "dutch": "loonheffing",
-    "category": "work",
-    "level": "A2",
-    "translations": {
-      "en": "wage tax / payroll tax",
-      "zh": "所得税 / 薪资税"
-    },
-    "notes": {
-      "en": "The tax deducted from your gross salary (brutoloon). This includes income tax and national insurance contributions.",
-      "zh": "从税前工资 (**brutoloon**) 中扣除的税款。"
-    }
-  },
-  {
     "id": "map",
     "dutch": "map",
     "category": "work",
@@ -2307,20 +2181,6 @@
     "notes": {
       "en": "\"Ontslag nemen\" (quit) or \"ontslag krijgen\" (get fired).",
       "zh": "\"Ontslag nemen\" 是辞职，\"ontslag krijgen\" 是被解雇。"
-    }
-  },
-  {
-    "id": "ontslag-krijgen",
-    "dutch": "ontslag krijgen",
-    "category": "work",
-    "level": "A2",
-    "translations": {
-      "en": "to be dismissed / fired",
-      "zh": "被解雇 / 被辞退"
-    },
-    "notes": {
-      "en": "If dismissed, you must immediately write a letter disagreeing with the decision (niet eens zijn) and contact the UWV or the union.",
-      "zh": "如果被解雇，必须立即写信表示不同意，并联系 UWV 或工会。"
     }
   },
   {
@@ -2506,20 +2366,6 @@
     }
   },
   {
-    "id": "vakbond",
-    "dutch": "vakbond",
-    "category": "work",
-    "level": "A2",
-    "translations": {
-      "en": "trade union",
-      "zh": "工会"
-    },
-    "notes": {
-      "en": "Organization for employees. Negotiates with employers about salaries and conditions (CAO). Provides legal aid (juridische hulp) if you are a member.",
-      "zh": "员工组织。与雇主协商集体劳动协议 (**CAO**)。提供法律援助。"
-    }
-  },
-  {
     "id": "vergadering",
     "dutch": "vergadering",
     "category": "work",
@@ -2548,20 +2394,6 @@
     }
   },
   {
-    "id": "werkloosheidsuitkering-ww",
-    "dutch": "werkloosheidsuitkering",
-    "category": "work",
-    "level": "A2",
-    "translations": {
-      "en": "unemployment benefit (WW)",
-      "zh": "失业救济金"
-    },
-    "notes": {
-      "en": "Benefit for those who lost their job and worked for at least 6 months. Administered by the UWV. You get approximately 1 month of WW per year worked.",
-      "zh": "失业金。如果你被解雇，向 **UWV** 申请。"
-    }
-  },
-  {
     "id": "werknemer",
     "dutch": "werknemer",
     "category": "work",
@@ -2573,34 +2405,6 @@
     "notes": {
       "en": "Person who works for the company.",
       "zh": "为公司工作的人。"
-    }
-  },
-  {
-    "id": "werkoverleg",
-    "dutch": "werkoverleg",
-    "category": "work",
-    "level": "A2",
-    "translations": {
-      "en": "work consultation / staff meeting",
-      "zh": "工作会议 / 员工商议"
-    },
-    "notes": {
-      "en": "A meeting to discuss and organize the work tasks (werkzaamheden).",
-      "zh": "讨论工作安排和任务的会议。"
-    }
-  },
-  {
-    "id": "ziek-melden",
-    "dutch": "ziek melden",
-    "category": "work",
-    "level": "A2",
-    "translations": {
-      "en": "to report sick",
-      "zh": "报告生病 / 请病假"
-    },
-    "notes": {
-      "en": "Obligation to inform your employer immediately when you are sick. You cannot have someone else call for you.",
-      "zh": "生病时必须立即通知雇主。"
     }
   },
   {
@@ -2632,20 +2436,6 @@
     }
   },
   {
-    "id": "aansprakelijkheidsverzekering",
-    "dutch": "aansprakelijkheidsverzekering",
-    "category": "housing",
-    "level": "A2",
-    "translations": {
-      "en": "liability insurance",
-      "zh": "责任险"
-    },
-    "notes": {
-      "en": "Covers damage you accidentally cause to other people's property (e.g., your child breaks the neighbor's window).",
-      "zh": "承保您无意中对他人财产造成的损害（例如，您的孩子踢球打破邻居的窗户）。"
-    }
-  },
-  {
     "id": "afval",
     "dutch": "afval",
     "category": "housing",
@@ -2671,20 +2461,6 @@
     "notes": {
       "en": "Mandatory in the Netherlands (e.g., GFT, paper, glass).",
       "zh": "强制性垃圾分类（如 GFT 是果蔬园艺垃圾）。"
-    }
-  },
-  {
-    "id": "afvalstoffenheffing",
-    "dutch": "afvalstoffenheffing",
-    "category": "housing",
-    "level": "A2",
-    "translations": {
-      "en": "waste tax",
-      "zh": "垃圾处理税"
-    },
-    "notes": {
-      "en": "Local tax paid to the municipality for collecting and processing household waste. Low-income people can apply for remission (kwijtschelding).",
-      "zh": "向市政厅支付的垃圾收集和处理费。低收入人群可申请豁免 (**kwijtschelding**)。"
     }
   },
   {
@@ -2716,34 +2492,6 @@
     }
   },
   {
-    "id": "chemobox",
-    "dutch": "chemobox",
-    "category": "housing",
-    "level": "A2",
-    "translations": {
-      "en": "chemical waste box",
-      "zh": "化学垃圾盒"
-    },
-    "notes": {
-      "en": "Special container for small chemical waste (Klein chemisch afval), such as paint, nail polish, batteries, and old medicines.",
-      "zh": "用于投放涂料、指甲油、电池和旧药等小型化学垃圾的专用盒子。"
-    }
-  },
-  {
-    "id": "energieleverancier",
-    "dutch": "energiebedrijf/ energieleverancier",
-    "category": "housing",
-    "level": "A2",
-    "translations": {
-      "en": "energy provider",
-      "zh": "能源公司"
-    },
-    "notes": {
-      "en": "The company that supplies gas and electricity (gas en elektriciteit). You choose your own supplier.",
-      "zh": "提供天然气和电力给您家里的公司。您可以自己选择。"
-    }
-  },
-  {
     "id": "gas-water-licht",
     "dutch": "gas / water / licht",
     "category": "housing",
@@ -2755,48 +2503,6 @@
     "notes": {
       "en": "GWL. Usually paid separately from rent (\"exclusief\").",
       "zh": "简称GWL。通常房租不包(\"exclusief\")，需另付。"
-    }
-  },
-  {
-    "id": "gft",
-    "dutch": "GFT",
-    "category": "housing",
-    "level": "A2",
-    "translations": {
-      "en": "vegetable, fruit, and garden waste",
-      "zh": "果蔬园艺垃圾"
-    },
-    "notes": {
-      "en": "Specific green waste that must be separated from restafval.",
-      "zh": "必须分类的绿色垃圾，包含蔬菜、水果和花园废物。"
-    }
-  },
-  {
-    "id": "glasbak",
-    "dutch": "glasbak",
-    "category": "housing",
-    "level": "A2",
-    "translations": {
-      "en": "glass recycling container",
-      "zh": "玻璃回收箱"
-    },
-    "notes": {
-      "en": "Container for recycling empty glass bottles and jars (potten en flessen). Lids (deksels) are usually allowed, but never ceramics.",
-      "zh": "回收空玻璃瓶和罐子的容器。盖子通常可以放入。"
-    }
-  },
-  {
-    "id": "grofvuil",
-    "dutch": "grofvuil",
-    "category": "housing",
-    "level": "A2",
-    "translations": {
-      "en": "bulky waste",
-      "zh": "大件垃圾"
-    },
-    "notes": {
-      "en": "Large waste items (like furniture, kapotte driezitsbank). Needs to be taken to a recycling center (milieustraat) or picked up by the municipality after making an appointment.",
-      "zh": "体积大的垃圾（如家具、旧沙发）。需要预约市政厅回收或自行送去环保站。"
     }
   },
   {
@@ -2828,20 +2534,6 @@
     }
   },
   {
-    "id": "huurcommissie",
-    "dutch": "huurcommissie",
-    "category": "housing",
-    "level": "A2",
-    "translations": {
-      "en": "rent commission",
-      "zh": "租金委员会"
-    },
-    "notes": {
-      "en": "Organization that helps resolve conflicts between tenants and landlords (huisbaas) over rent price or maintenance.",
-      "zh": "帮助解决租户与房东之间关于租金或维修问题的机构。"
-    }
-  },
-  {
     "id": "huurcontract",
     "dutch": "huurcontract",
     "category": "housing",
@@ -2853,20 +2545,6 @@
     "notes": {
       "en": "Read carefully before signing!",
       "zh": "签字前仔细阅读！"
-    }
-  },
-  {
-    "id": "huurder",
-    "dutch": "huurder",
-    "category": "housing",
-    "level": "A2",
-    "translations": {
-      "en": "tenant / renter",
-      "zh": "租户"
-    },
-    "notes": {
-      "en": "The person who pays rent to the landlord (verhuurder).",
-      "zh": "向房东（verhuurder）支付租金的人。"
     }
   },
   {
@@ -2884,20 +2562,6 @@
     }
   },
   {
-    "id": "inboedelverzekering",
-    "dutch": "inboedelverzekering",
-    "category": "housing",
-    "level": "A2",
-    "translations": {
-      "en": "contents insurance",
-      "zh": "家庭财产保险"
-    },
-    "notes": {
-      "en": "Insurance for personal belongings inside the house (furniture, computer) against fire or theft. Not mandatory.",
-      "zh": "房屋内部财物（如家具、电脑）的保险。在火灾或盗窃时赔付。"
-    }
-  },
-  {
     "id": "makelaar",
     "dutch": "makelaar",
     "category": "housing",
@@ -2909,34 +2573,6 @@
     "notes": {
       "en": "Person who helps you buy or sell a house. \"Aankoopmakelaar\" helps you buy.",
       "zh": "帮你买卖房子的人。\"Aankoopmakelaar\" 是买方中介。"
-    }
-  },
-  {
-    "id": "meterstand",
-    "dutch": "meterstand",
-    "category": "housing",
-    "level": "A2",
-    "translations": {
-      "en": "meter reading",
-      "zh": "能耗表读数"
-    },
-    "notes": {
-      "en": "The reading on your gas/electricity meter. Must be reported annually for the yearly bill (jaarrekening).",
-      "zh": "燃气或电表的读数。每年需要报告给能源公司，以计算年结单。"
-    }
-  },
-  {
-    "id": "milieustraat",
-    "dutch": "milieustraat",
-    "category": "housing",
-    "level": "A2",
-    "translations": {
-      "en": "recycling center / waste depot",
-      "zh": "环保站 / 回收中心"
-    },
-    "notes": {
-      "en": "Place where residents can bring large/bulky waste (grof vuil) or chemical waste (chemisch afval).",
-      "zh": "居民可以丢弃大件或化学垃圾的地方。"
     }
   },
   {
@@ -2982,20 +2618,6 @@
     }
   },
   {
-    "id": "polis",
-    "dutch": "polis",
-    "category": "housing",
-    "level": "A2",
-    "translations": {
-      "en": "insurance policy",
-      "zh": "保单 / 保险合同"
-    },
-    "notes": {
-      "en": "The official contract paper you receive from your insurance company (verzekering).",
-      "zh": "您从保险公司收到的正式合同文件。"
-    }
-  },
-  {
     "id": "renteaftrek",
     "dutch": "renteaftrek",
     "category": "housing",
@@ -3038,34 +2660,6 @@
     }
   },
   {
-    "id": "stroomstoring",
-    "dutch": "stroomstoring",
-    "category": "housing",
-    "level": "A2",
-    "translations": {
-      "en": "power outage / electricity fault",
-      "zh": "停电 / 能源故障"
-    },
-    "notes": {
-      "en": "If you have an outage, first check if the whole house is affected and ask neighbors before calling the utility company (0800-9009).",
-      "zh": "停电时，先检查家里是否全停电并询问邻居。然后拨打故障热线 (0800-9009)。"
-    }
-  },
-  {
-    "id": "urgentieverklaring",
-    "dutch": "urgentieverklaring",
-    "category": "housing",
-    "level": "A2",
-    "translations": {
-      "en": "urgent housing declaration",
-      "zh": "紧急住房声明"
-    },
-    "notes": {
-      "en": "A document from the municipality giving priority (voorrang) for housing due to severe circumstances (e.g., divorce with children, major health issues).",
-      "zh": "市政厅出具的文件，允许在住房分配中获得优先权，通常仅在情况非常紧急时发放。"
-    }
-  },
-  {
     "id": "verhuizen",
     "dutch": "verhuizen",
     "category": "housing",
@@ -3077,34 +2671,6 @@
     "notes": {
       "en": "\"Ik ga verhuizen\". Don't forget to inform the municipality.",
       "zh": "\"我要搬家了\"。别忘了通知市政厅。"
-    }
-  },
-  {
-    "id": "verhuurder",
-    "dutch": "verhuurder",
-    "category": "housing",
-    "level": "A2",
-    "translations": {
-      "en": "landlord",
-      "zh": "房东"
-    },
-    "notes": {
-      "en": "The owner of the house who rents it out. Responsible for big repairs and major maintenance.",
-      "zh": "将房屋出租的人。负责主要的维修和维护。"
-    }
-  },
-  {
-    "id": "wachtlijst",
-    "dutch": "wachtlijst",
-    "category": "housing",
-    "level": "A2",
-    "translations": {
-      "en": "waiting list",
-      "zh": "等待名单 / 轮候名单"
-    },
-    "notes": {
-      "en": "Used when applying for social housing (sociale huurwoning) or sometimes child care (kinderopvang). Waiting times can be years, especially in large cities.",
-      "zh": "申请社会租房或托儿服务时需要排队等待。在大城市可能等待数年。"
     }
   },
   {
@@ -3220,20 +2786,6 @@
     }
   },
   {
-    "id": "drogist",
-    "dutch": "drogist",
-    "category": "health",
-    "level": "A2",
-    "translations": {
-      "en": "drugstore",
-      "zh": "药妆店 / 日用品店"
-    },
-    "notes": {
-      "en": "Place where you can buy over-the-counter medicine (e.g., paracetamol, hoestdrank) without a prescription.",
-      "zh": "可以无需处方购买非处方药（如止痛药、止咳糖浆）的地方。"
-    }
-  },
-  {
     "id": "duizelig",
     "dutch": "duizelig",
     "category": "health",
@@ -3259,34 +2811,6 @@
     "notes": {
       "en": "Mandatory amount you pay before insurance kicks in (usually ~€385/year).",
       "zh": "医保理赔前需自付的金额，通常每年约 385 欧。"
-    }
-  },
-  {
-    "id": "fysiotherapeut",
-    "dutch": "fysiotherapeut",
-    "category": "health",
-    "level": "A2",
-    "translations": {
-      "en": "physiotherapist",
-      "zh": "理疗师 / 物理治疗师"
-    },
-    "notes": {
-      "en": "Helps with movement problems (lopen, arm, nek, rug). Usually covered by supplementary insurance (aanvullende verzekering).",
-      "zh": "帮助解决运动问题。通常需要额外保险 (**aanvullende verzekering**) 才能报销。"
-    }
-  },
-  {
-    "id": "gynaecoloog",
-    "dutch": "gynaecoloog",
-    "category": "health",
-    "level": "A2",
-    "translations": {
-      "en": "gynecologist",
-      "zh": "妇科医生"
-    },
-    "notes": {
-      "en": "Specialist for women's health. You go here if there are medical problems during pregnancy, referred by the midwife.",
-      "zh": "妇科专科医生。如果在怀孕期间出现医疗问题，由助产士转诊。"
     }
   },
   {
@@ -3329,20 +2853,6 @@
     "notes": {
       "en": "First contact for ANY medical issue. Need referral (\"verwijsbrief\") for specialists.",
       "zh": "医疗首要联系人。看专科必须有家庭医生的转诊信(\"verwijsbrief\")。"
-    }
-  },
-  {
-    "id": "jeugdzorg",
-    "dutch": "Bureau Jeugdzorg",
-    "category": "health",
-    "level": "A2",
-    "translations": {
-      "en": "Youth Care Agency",
-      "zh": "青少年服务局"
-    },
-    "notes": {
-      "en": "Provides assistance for problems related to child upbringing (opvoeding), especially if a child is not listening or is having trouble.",
-      "zh": "为儿童抚养问题提供帮助和咨询。如果孩子不听话或有行为问题，可向其寻求帮助。"
     }
   },
   {
@@ -3514,20 +3024,6 @@
     }
   },
   {
-    "id": "spoedeisende-hulp-seh",
-    "dutch": "Spoedeisende Hulp",
-    "category": "health",
-    "level": "A2",
-    "translations": {
-      "en": "Emergency Room (ER)",
-      "zh": "急诊室"
-    },
-    "notes": {
-      "en": "Hospital department for urgent cases (ernstig ongeluk, gebroken arm). Can be visited without appointment.",
-      "zh": "医院的急诊部门。处理紧急情况（如骨折），无需预约。"
-    }
-  },
-  {
     "id": "spreekuur",
     "dutch": "spreekuur",
     "category": "health",
@@ -3654,20 +3150,6 @@
     }
   },
   {
-    "id": "ziektekosten",
-    "dutch": "ziektekosten",
-    "category": "health",
-    "level": "A2",
-    "translations": {
-      "en": "healthcare costs",
-      "zh": "医疗费用"
-    },
-    "notes": {
-      "en": "Costs associated with health care, covered by the zorgverzekering.",
-      "zh": "与医疗护理相关的费用。"
-    }
-  },
-  {
     "id": "zorgverzekering",
     "dutch": "zorgverzekering",
     "category": "health",
@@ -3707,20 +3189,6 @@
     "notes": {
       "en": "You apply for a subsidy or permit (\"toeslag/vergunning aanvragen\").",
       "zh": "申请津贴或许可证(\"toeslag/vergunning aanvragen\")。"
-    }
-  },
-  {
-    "id": "administratie",
-    "dutch": "administratie",
-    "category": "admin",
-    "level": "A2",
-    "translations": {
-      "en": "administration / record keeping",
-      "zh": "行政管理 / 档案"
-    },
-    "notes": {
-      "en": "The process of managing official data. GBA (Gemeentelijke BasisAdministratie) is where personal data is registered.",
-      "zh": "管理官方数据的过程。GBA是市政厅的公民基本档案系统。"
     }
   },
   {
@@ -3794,34 +3262,6 @@
     }
   },
   {
-    "id": "burgemeester",
-    "dutch": "burgemeester",
-    "category": "admin",
-    "level": "A2",
-    "translations": {
-      "en": "mayor",
-      "zh": "市长"
-    },
-    "notes": {
-      "en": "The head (hoofd) of the municipality (gemeente). Leads the municipal council (gemeenteraad) meetings. The position is not elected directly by the people.",
-      "zh": "市政厅的首长。由市议会选举产生，而不是由市民直接选举。"
-    }
-  },
-  {
-    "id": "burgerlijke-staat",
-    "dutch": "burgerlijke staat",
-    "category": "admin",
-    "level": "A2",
-    "translations": {
-      "en": "marital status",
-      "zh": "婚姻状况"
-    },
-    "notes": {
-      "en": "Refers to whether you are married, single, divorced, etc. Changes if you marry or divorce.",
-      "zh": "指个人是否已婚、单身、离婚等状态。结婚或离婚时会发生变化。"
-    }
-  },
-  {
     "id": "Burgerservicenummer",
     "dutch": "Burgerservicenummer",
     "category": "admin",
@@ -3875,48 +3315,6 @@
     "notes": {
       "en": "Local government. Go here for registration (\"inschrijven\"), ID, driving license.",
       "zh": "地方政府。去那里注册地址(\"inschrijven\")、办身份证、驾照。"
-    }
-  },
-  {
-    "id": "gemeentegids",
-    "dutch": "gemeentegids",
-    "category": "admin",
-    "level": "A2",
-    "translations": {
-      "en": "municipal guide / city guide",
-      "zh": "市政指南 / 市政手册"
-    },
-    "notes": {
-      "en": "Guide provided by the municipality with information about services, doctors, and local organizations.",
-      "zh": "市政厅提供的指南，包含服务信息、医生和本地组织联系方式。"
-    }
-  },
-  {
-    "id": "gemeenteraad",
-    "dutch": "gemeenteraad",
-    "category": "admin",
-    "level": "A2",
-    "translations": {
-      "en": "municipal council",
-      "zh": "市议会"
-    },
-    "notes": {
-      "en": "Members elected every 4 years. They decide on local issues like building schools or roads.",
-      "zh": "每 4 年选举一次。决定地方事务，例如新建学校或道路。合法居住满 5 年的外国人可参与投票。"
-    }
-  },
-  {
-    "id": "groenlinks",
-    "dutch": "GroenLinks",
-    "category": "admin",
-    "level": "A2",
-    "translations": {
-      "en": "GreenLeft (Political Party)",
-      "zh": "绿色左翼 (政党)"
-    },
-    "notes": {
-      "en": "A left-wing party that focuses heavily on the environment (milieu) and equal opportunities.",
-      "zh": "左翼政党，重视环境（milieu）保护和缩小贫富差距。"
     }
   },
   {
@@ -3987,20 +3385,6 @@
     "notes": {
       "en": "Mandatory registering your address at the municipality. Illegal to live somewhere without it.",
       "zh": "在市政厅注册地址。必须做，否则违法 (\"illegal onderhuur\")。"
-    }
-  },
-  {
-    "id": "jaaropgave",
-    "dutch": "jaaropgave",
-    "category": "admin",
-    "level": "A2",
-    "translations": {
-      "en": "annual statement (income)",
-      "zh": "年度工资单 / 年结单"
-    },
-    "notes": {
-      "en": "Annual document from your employer or benefit provider showing total income and paid taxes. Used for tax declaration (belastingaangifte). Must be saved for 5 years.",
-      "zh": "每年收到的收入和已缴税费总结。用于报税。必须保存 5 年。"
     }
   },
   {
@@ -4102,20 +3486,6 @@
     }
   },
   {
-    "id": "politieke-partij",
-    "dutch": "politieke partij",
-    "category": "admin",
-    "level": "A2",
-    "translations": {
-      "en": "political party",
-      "zh": "政党"
-    },
-    "notes": {
-      "en": "Organizations people can vote for. They have different ideas (left/links or right/rechts).",
-      "zh": "人们可以投票选举的组织。分为左翼、右翼和中间党派。"
-    }
-  },
-  {
     "id": "prinsjesdag",
     "dutch": "Prinsjesdag",
     "category": "admin",
@@ -4127,20 +3497,6 @@
     "notes": {
       "en": "Third Tuesday of September. The King travels to the Binnenhof in the Gouden Koets to read the Troonrede.",
       "zh": "每年 9 月的第三个星期二，国王乘坐金色马车（gouden koets）前往议会宣读政府计划。"
-    }
-  },
-  {
-    "id": "raadslid",
-    "dutch": "raadslid",
-    "category": "admin",
-    "level": "A2",
-    "translations": {
-      "en": "council member / councillor",
-      "zh": "市议员"
-    },
-    "notes": {
-      "en": "Elected member of the Gemeenteraad.",
-      "zh": "市议会（Gemeenteraad）的成员。"
     }
   },
   {
@@ -4253,20 +3609,6 @@
     "notes": {
       "en": "Voting event. Elections are held every 4 years for the Tweede Kamer and Gemeenteraad.",
       "zh": "投票活动。例如每 4 年举行一次的国会二院和市议会选举。"
-    }
-  },
-  {
-    "id": "vernieuwen",
-    "dutch": "vernieuwen",
-    "category": "admin",
-    "level": "A2",
-    "translations": {
-      "en": "to renew",
-      "zh": "更新 / 续期"
-    },
-    "notes": {
-      "en": "To extend the validity of documents like a driver's license (rijbewijs) or passport.",
-      "zh": "延长文件（如驾照或护照）的有效期。"
     }
   },
   {

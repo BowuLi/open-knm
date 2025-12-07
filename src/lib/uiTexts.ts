@@ -13,6 +13,7 @@ export type NavTexts = {
   resources: string;
   assistant: string;
   vocabulary: string;
+  speaking: string;
   about: string;
 };
 
@@ -56,6 +57,9 @@ export type UiTexts = {
     promoDesc: string;
     promoAction: string;
   };
+  speaking: {
+    desktopBanner: string;
+  };
   vocabulary: VocabularyTexts & {
     viewMode: {
       card: string;
@@ -82,6 +86,7 @@ export const uiTexts: Record<Locale, UiTexts> = {
       resources: "资源",
       assistant: "AI 助教",
       vocabulary: "高频词汇",
+      speaking: "口语练习",
       about: "关于与贡献",
     },
     footer: {
@@ -104,6 +109,9 @@ export const uiTexts: Record<Locale, UiTexts> = {
       promoTitle: "全新：AI 助教上线",
       promoDesc: "基于 NotebookLM，让 AI 帮你划重点、出模拟题。",
       promoAction: "去试试 →",
+    },
+    speaking: {
+      desktopBanner: "Beta 功能：语音识别持续优化中。为获得最佳体验，建议使用桌面端访问。",
     },
     vocabulary: {
       title: "荷兰语高频词汇 (A2)",
@@ -146,6 +154,7 @@ export const uiTexts: Record<Locale, UiTexts> = {
       resources: "Resources",
       assistant: "AI Assistant",
       vocabulary: "Vocabulary",
+      speaking: "Speaking",
       about: "About & Contribute",
     },
     footer: {
@@ -168,6 +177,9 @@ export const uiTexts: Record<Locale, UiTexts> = {
       promoTitle: "New: AI Assistant",
       promoDesc: "Powered by NotebookLM. Get summaries and mock questions instantly.",
       promoAction: "Try it now →",
+    },
+    speaking: {
+      desktopBanner: "Beta Feature: Speech recognition is being optimized. For best results, use a desktop computer.",
     },
     vocabulary: {
       title: "Essential Dutch Vocabulary (A2)",

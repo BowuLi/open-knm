@@ -3,15 +3,34 @@ import { Locale } from "@/lib/uiTexts";
 import { absoluteUrl } from "@/lib/siteConfig";
 import { SpeakingContent } from "@/components/SpeakingContent";
 
-const speakingPageMeta: Record<Locale, { title: string; description: string }> = {
+const speakingPageMeta: Record<Locale, { title: string; description: string; keywords: string[] }> = {
   en: {
-    title: "A2 Speaking Practice | Open KNM",
+    title: "A2 Speaking Practice & Mock Exam | Open KNM",
     description:
-      "Tri-language guidance for the Dutch A2 speaking exam—mock questions, templates, and exam flow reminders.",
+      "Interactive Dutch A2 speaking practice with speech recognition. Mock exam questions for Inburgering Part 1 (Q&A) and Part 2 (Picture Description).",
+    keywords: [
+      "Dutch speaking practice",
+      "Inburgering exam A2",
+      "Dutch speaking exam",
+      "speaking mock test",
+      "Dutch speech recognition",
+      "learn Dutch speaking",
+      "Inburgering part 1",
+      "Inburgering part 2",
+    ],
   },
   zh: {
-    title: "A2 口语练习 | Open KNM",
-    description: "三语示例、模拟问答、流程教具，帮助你自信通过 A2 口语。",
+    title: "A2 口语模拟练习 (带语音识别) | Open KNM",
+    description: "融入考试口语全真模拟。包含第一部分（问答）与第二部分（看图说话），支持浏览器语音识别实时反馈，助你自信通过荷兰语 A2 口语考试。",
+    keywords: [
+      "荷兰语口语练习",
+      "融入考试口语",
+      "Inburgering A2 口语",
+      "荷兰语语音识别",
+      "荷兰语口语模拟",
+      "荷兰语看图说话",
+      "荷兰语口语题库",
+    ],
   },
 };
 
@@ -29,6 +48,7 @@ export async function generateMetadata({
   return {
     title: meta.title,
     description: meta.description,
+    keywords: meta.keywords,
     alternates: {
       canonical,
       languages: {
@@ -58,4 +78,3 @@ export default async function SpeakingPage({
   const { locale } = await params;
   return <SpeakingContent locale={locale} />;
 }
-

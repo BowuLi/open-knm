@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import flashcardsData from "@/data/knm_flashcards.json";
 import { Locale } from "@/lib/uiTexts";
 
@@ -8,23 +8,44 @@ interface FlashCardProps {
   locale: Locale;
 }
 
+type FlashCardObj = {
+  id: number;
+  question_nl: string;
+  question_zh: string;
+  question_en: string;
+  options_nl: string[];
+  options_zh: string[];
+  options_en: string[];
+  answer_nl: string;
+  answer_zh: string;
+  answer_en: string;
+  category: string;
+  [key: string]: string | string[] | number;
+};
+
 export const FlashCard: React.FC<FlashCardProps> = ({ locale }) => {
-  const card = useMemo(() => {
-    const idx = Math.floor(Math.random() * flashcardsData.length);
-    return flashcardsData[idx];
-  }, []);
+  const [card, setCard] = useState<FlashCardObj | null>(null);
   const [selected, setSelected] = useState<number | null>(null);
   const [revealed, setRevealed] = useState(false);
   const [showTranslation, setShowTranslation] = useState(false);
 
-  // Always show Dutch by default
-  const question_nl = card["question_nl"];
-  const options_nl = card["options_nl"];
-  const answer_nl = card["answer_nl"];
-  // Use user's locale for translation (fallback to English)
-  const question_tr = (card as any)[`question_${locale}`] || card["question_en"];
-  const options_tr = (card as any)[`options_${locale}`] || card["options_en"];
-  const answer_tr = (card as any)[`answer_${locale}`] || card["answer_en"];
+  useEffect(() => {
+    // Only pick card on initial client render, never during SSR or re-render.
+    const idx = Math.floor(Math.random() * flashcardsData.length);
+    setCard(flashcardsData[idx]);
+  }, []);
+
+  if (!card) {
+    // Could show a skeleton loader here, but we'll just render nothing for a split second
+    return null;
+  }
+
+  const question_nl = card["question_nl"] as string;
+  const options_nl = card["options_nl"] as string[];
+  const answer_nl = card["answer_nl"] as string;
+  const question_tr = (card[`question_${locale}`] as string) || (card["question_en"] as string);
+  const options_tr = (card[`options_${locale}`] as string[]) || (card["options_en"] as string[]);
+  const answer_tr = (card[`answer_${locale}`] as string) || (card["answer_en"] as string);
   const category = card.category;
 
   return (

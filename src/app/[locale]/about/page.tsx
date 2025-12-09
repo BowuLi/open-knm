@@ -1,5 +1,6 @@
 import { Locale, isLocale } from "@/lib/uiTexts";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
@@ -40,10 +41,12 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           <div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center mb-8 border-b border-white/10 pb-8">
              <div className="relative">
                <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg ring-4 ring-white/20 relative bg-slate-800">
-                 <img 
+                 <Image 
                    src="/images/author.jpg" 
                    alt="Author" 
-                   className="w-full h-full object-cover"
+                   fill
+                   sizes="80px"
+                   className="object-cover"
                  />
                </div>
                <div className="absolute -bottom-1 -right-1 bg-white text-[10px] font-bold text-slate-900 px-2 py-0.5 rounded-full shadow-sm">

@@ -249,6 +249,30 @@ export const universalPhrases: UniversalPhraseGroup[] = [
         dutch: "In het weekend ga ik ...",
         translation: { nl: "", zh: "周末我去...", en: "In the weekend I go ..." },
       },
+      {
+        dutch: "Ik ga liever met de auto / trein.",
+        translation: { nl: "", zh: "我更喜欢坐车/坐火车。", en: "I prefer going by car / train." },
+      },
+      {
+        dutch: "Dat doe ik elke dag / week.",
+        translation: { nl: "", zh: "我每天/每周都那样做。", en: "I do that every day / week." },
+      },
+      {
+        dutch: "Omdat ik dat gezellig vind.",
+        translation: { nl: "", zh: "因为我觉得那很惬意/愉快。", en: "Because I find that cozy/pleasant." },
+      },
+      {
+        dutch: "Ik vind koken / sporten leuk.",
+        translation: { nl: "", zh: "我喜欢做饭/运动。", en: "I like cooking / sports." },
+      },
+      {
+        dutch: "Ik ga vaak naar de markt.",
+        translation: { nl: "", zh: "我经常去市场。", en: "I often go to the market." },
+      },
+      {
+        dutch: "Dat vind ik te duur.",
+        translation: { nl: "", zh: "我觉得那个太贵了。", en: "I think that is too expensive." },
+      },
     ],
   },
   {
@@ -274,6 +298,30 @@ export const universalPhrases: UniversalPhraseGroup[] = [
       {
         dutch: "Het is mooi / slecht weer.",
         translation: { nl: "", zh: "天气很好/不好。", en: "The weather is nice/bad." },
+      },
+      {
+        dutch: "Er zijn twee / drie mensen.",
+        translation: { nl: "", zh: "有两/三个人。", en: "There are two / three people." },
+      },
+      {
+        dutch: "Ze zien er blij / boos uit.",
+        translation: { nl: "", zh: "他们看起来很高兴/生气。", en: "They look happy / angry." },
+      },
+      {
+        dutch: "Op de achtergrond zie ik ...",
+        translation: { nl: "", zh: "在背景中我看到...", en: "In the background I see ..." },
+      },
+      {
+        dutch: "Hij / Zij draagt een jas / bril.",
+        translation: { nl: "", zh: "他/她穿着外套/戴着眼镜。", en: "He/She is wearing a coat / glasses." },
+      },
+      {
+        dutch: "Ze staan bij de bushalte.",
+        translation: { nl: "", zh: "他们在公交车站。", en: "They are at the bus stop." },
+      },
+      {
+        dutch: "Hij heeft een fiets.",
+        translation: { nl: "", zh: "他有一辆自行车。", en: "He has a bicycle." },
       },
     ],
   },
@@ -301,6 +349,30 @@ export const universalPhrases: UniversalPhraseGroup[] = [
         dutch: "Dat vind ik belangrijk.",
         translation: { nl: "", zh: "我觉得那很重要。", en: "I think that is important." },
       },
+      {
+        dutch: "Ik doe dat liever.",
+        translation: { nl: "", zh: "我更喜欢那样做。", en: "I prefer doing that." },
+      },
+      {
+        dutch: "... is gezelliger dan ...",
+        translation: { nl: "", zh: "...比...更惬意。", en: "... is cozier than ..." },
+      },
+      {
+        dutch: "Ik vind ... niet leuk.",
+        translation: { nl: "", zh: "我不喜欢...", en: "I don't like ..." },
+      },
+      {
+        dutch: "Het rechterplaatje is mooier.",
+        translation: { nl: "", zh: "右边的图片更漂亮。", en: "The right picture is prettier." },
+      },
+      {
+        dutch: "Het linkerplaatje is drukker.",
+        translation: { nl: "", zh: "左边的图片更拥挤/忙碌。", en: "The left picture is busier." },
+      },
+      {
+        dutch: "Ik houd niet van ...",
+        translation: { nl: "", zh: "我不喜欢...", en: "I do not like ..." },
+      },
     ],
   },
   {
@@ -327,6 +399,30 @@ export const universalPhrases: UniversalPhraseGroup[] = [
         dutch: "Hij is blij / moe.",
         translation: { nl: "", zh: "他很高兴/累了。", en: "He is happy / tired." },
       },
+      {
+        dutch: "Hij / Zij wil ...",
+        translation: { nl: "", zh: "他/她想...", en: "He / She wants to ..." },
+      },
+      {
+        dutch: "Dan gaat hij / zij naar ...",
+        translation: { nl: "", zh: "然后他/她去了...", en: "Then he / she goes to ..." },
+      },
+      {
+        dutch: "Het is vroeg / laat.",
+        translation: { nl: "", zh: "现在很早/很晚。", en: "It is early / late." },
+      },
+      {
+        dutch: "Ze gaan samen ...",
+        translation: { nl: "", zh: "他们一起去...", en: "They go together ..." },
+      },
+      {
+        dutch: "Hij praat met de vrouw.",
+        translation: { nl: "", zh: "他和那位女士说话。", en: "He is talking to the woman." },
+      },
+      {
+        dutch: "Ze gaan naar huis.",
+        translation: { nl: "", zh: "他们回家了。", en: "They are going home." },
+      },
     ],
   },
 ];
@@ -344,6 +440,177 @@ export type SpeakingQuestion = {
 
 export const speakingQuestions: SpeakingQuestion[] = [
   // --- TYPE 1: Q&A ---
+  {
+    id: "q1-family",
+    topic: "type1_qa",
+    question: {
+      nl: "Heb je familie in Nederland?",
+      zh: "你在荷兰有家人吗？",
+      en: "Do you have family in the Netherlands?",
+    },
+    answer: {
+      nl: "Ja, mijn man en mijn kinderen wonen hier. De rest van mijn familie woont in mijn land.",
+      zh: "是的，我的丈夫和孩子住在这里。我其他的家人们住在我的祖国。",
+      en: "Yes, my husband and children live here. The rest of my family lives in my country.",
+    },
+    tip: {
+      nl: "Antwoord met 'Ja' of 'Nee' en leg uit.",
+      zh: "用“是”或“否”回答并解释。",
+      en: "Answer with 'Yes' or 'No' and explain.",
+    },
+  },
+  {
+    id: "q1-duration",
+    topic: "type1_qa",
+    question: {
+      nl: "Hoelang woon je al in Nederland?",
+      zh: "你在荷兰住多久了？",
+      en: "How long have you lived in the Netherlands?",
+    },
+    answer: {
+      nl: "Ik woon nu twee jaar in Nederland.",
+      zh: "我在荷兰住了两年了。",
+      en: "I have lived in the Netherlands for two years now.",
+    },
+    tip: {
+      nl: "Gebruik 'al' (tijdsduur) of een aantal jaar.",
+      zh: "提到具体的年数。",
+      en: "Mention the number of years.",
+    },
+  },
+  {
+    id: "q1-opinion-nl",
+    topic: "type1_qa",
+    question: {
+      nl: "Wat vind je leuk aan Nederland?",
+      zh: "你喜欢荷兰的什么？",
+      en: "What do you like about the Netherlands?",
+    },
+    answer: {
+      nl: "Ik vind de vrijheid fijn en de mensen zijn aardig.",
+      zh: "我喜欢这里的自由，而且人们很友善。",
+      en: "I like the freedom and the people are nice.",
+    },
+    tip: {
+      nl: "Noem één of twee positieve dingen.",
+      zh: "列举一两个积极的方面。",
+      en: "Mention one or two positive things.",
+    },
+  },
+  {
+    id: "q1-weather-opinion",
+    topic: "type1_qa",
+    question: {
+      nl: "Wat vind je van het weer in Nederland?",
+      zh: "你觉得荷兰的天气怎么样？",
+      en: "What do you think of the weather in the Netherlands?",
+    },
+    answer: {
+      nl: "Ik vind het weer niet zo leuk, want het regent vaak.",
+      zh: "我不太喜欢这里的气候，因为经常下雨。",
+      en: "I don't like the weather much, because it rains often.",
+    },
+    tip: {
+      nl: "Gebruik 'Ik vind...' om je mening te geven.",
+      zh: "使用 'Ik vind...' 来表达观点。",
+      en: "Use 'Ik vind...' to express your opinion.",
+    },
+  },
+  {
+    id: "q1-supermarket-transport",
+    topic: "type1_qa",
+    question: {
+      nl: "Hoe ga je meestal naar de supermarkt?",
+      zh: "你通常怎么去超市？",
+      en: "How do you usually go to the supermarket?",
+    },
+    answer: {
+      nl: "Ik ga meestal met de fiets, want de supermarkt is dichtbij.",
+      zh: "我通常骑自行车去，因为超市很近。",
+      en: "I usually go by bike, because the supermarket is close.",
+    },
+    tip: {
+      nl: "Vertel hoe (vervoersmiddel) en waarom.",
+      zh: "说明交通方式和原因。",
+      en: "State the transport mode and why.",
+    },
+  },
+  {
+    id: "q1-dutch-food",
+    topic: "type1_qa",
+    question: {
+      nl: "Wat vind je van het Nederlandse eten?",
+      zh: "你觉得荷兰食物怎么样？",
+      en: "What do you think of Dutch food?",
+    },
+    answer: {
+      nl: "Ik vind het Nederlandse eten lekker, vooral de stamppot en de kaas.",
+      zh: "我觉得荷兰食物很好吃，特别是捣碎的土豆泥蔬菜和奶酪。",
+      en: "I think Dutch food is tasty, especially the 'stamppot' and the cheese.",
+    },
+    tip: {
+      nl: "Wees positief of beleefd. Noem een specifiek gerecht.",
+      zh: "保持积极或礼貌。提到一个具体的菜。",
+      en: "Be positive or polite. Mention a specific dish.",
+    },
+  },
+  {
+    id: "q1-holiday",
+    topic: "type1_qa",
+    question: {
+      nl: "Wat is je favoriete feestdag?",
+      zh: "你最喜欢的节日是什么？",
+      en: "What is your favorite holiday?",
+    },
+    answer: {
+      nl: "Mijn favoriete feestdag is Kerstmis, want dan ben ik samen met familie.",
+      zh: "我最喜欢的节日是圣诞节，因为那时候我和家人在一起。",
+      en: "My favorite holiday is Christmas, because then I am together with family.",
+    },
+    tip: {
+      nl: "Noem een dag (Kerst, Koningsdag) en waarom.",
+      zh: "提一个节日（圣诞节、国王节）并说明原因。",
+      en: "Name a day (Christmas, King's Day) and why.",
+    },
+  },
+  {
+    id: "q1-work-desire",
+    topic: "type1_qa",
+    question: {
+      nl: "Wat voor werk doe je nu, of wat voor werk wil je doen?",
+      zh: "你现在做什么工作，或者你想做什么工作？",
+      en: "What kind of work do you do now, or what do you want to do?",
+    },
+    answer: {
+      nl: "Ik werk nu niet, maar ik wil graag in een winkel werken.",
+      zh: "我现在没工作，但我很想在商店工作。",
+      en: "I am not working now, but I would like to work in a shop.",
+    },
+    tip: {
+      nl: "Vertel wat je wilt ('Ik wil graag...').",
+      zh: "说出你的意愿 ('Ik wil graag...')。",
+      en: "Say what you want ('Ik wil graag...').",
+    },
+  },
+  {
+    id: "q1-work-time",
+    topic: "type1_qa",
+    question: {
+      nl: "Hoe laat begint je werk of school meestal?",
+      zh: "你通常几点开始工作或上学？",
+      en: "What time do your work or school usually start?",
+    },
+    answer: {
+      nl: "Ik begin meestal om half negen 's ochtends.",
+      zh: "我通常早上八点半开始。",
+      en: "I usually start at half past eight in the morning.",
+    },
+    tip: {
+      nl: "Noem een tijdstip (bijv. 9 uur, half 9).",
+      zh: "提到一个时间点（如9点，8点半）。",
+      en: "Mention a time (e.g., 9 o'clock, half past 8).",
+    },
+  },
   {
     id: "q1-weekend",
     topic: "type1_qa",
@@ -509,14 +776,14 @@ export const speakingQuestions: SpeakingQuestion[] = [
       "/images/speaking/school_new.png"
     ],
     question: {
-      nl: "In welke school wil je les hebben? En waarom?",
-      zh: "你想在哪所学校上课？为什么？",
-      en: "In which school do you want to have lessons? And why?",
+      nl: "In welke school heb je liever les? En waarom?",
+      zh: "你更喜欢在哪所学校上课？为什么？",
+      en: "In which school would you rather have lessons? And why?",
     },
     answer: {
-      nl: "Ik wil les hebben in de nieuwe school, want die ziet er vrolijk en licht uit.",
-      zh: "我想在新学校上课，因为它看起来很欢快明亮。",
-      en: "I want to have lessons in the new school, because it looks cheerful and bright.",
+      nl: "Ik heb liever les in de rechterschool, want die vind ik mooier.",
+      zh: "我更喜欢在右边的学校上课，因为我觉得它更漂亮。",
+      en: "I prefer having lessons in the school on the right, because I think it is prettier.",
     },
     tip: {
       nl: "Kies plaatje 1 of 2 en geef een reden.",
@@ -536,14 +803,14 @@ export const speakingQuestions: SpeakingQuestion[] = [
       "/images/speaking/house.png"
     ],
     question: {
-      nl: "Waar wil je liever wonen? En waarom?",
-      zh: "你更想住在哪里？为什么？",
-      en: "Where would you prefer to live? And why?",
+      nl: "Waar woon je liever? En waarom?",
+      zh: "你更喜欢住在哪里？为什么？",
+      en: "Where do you prefer to live? And why?",
     },
     answer: {
-      nl: "Ik woon liever in het grote huis, want ik houd van de tuin.",
-      zh: "我更喜欢住在大房子里，因为我喜欢花园。",
-      en: "I prefer to live in the large house, because I like the garden.",
+      nl: "Ik woon liever in het rechterhuis, want dat vind ik mooier.",
+      zh: "我更喜欢住在右边的房子里，因为我觉得它更漂亮。",
+      en: "I prefer living in the house on the right, because I think it is prettier.",
     },
     tip: {
       nl: "Kies wat jij leuk vindt en zeg waarom.",
@@ -583,4 +850,3 @@ export const speakingQuestions: SpeakingQuestion[] = [
     },
   },
 ];
-

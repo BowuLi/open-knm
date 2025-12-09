@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import { Locale, uiTexts } from "@/lib/uiTexts";
 import { vocabularyList, VocabularyItem } from "@/data/vocabulary";
 
@@ -298,7 +298,7 @@ function VocabularyCard({ item, locale }: { item: VocabularyItem; locale: Locale
   );
 }
 
-function VocabularyListItem({ item, locale, index }: { item: VocabularyItem; locale: Locale; index: number }) {
+function VocabularyListItem({ item, locale }: { item: VocabularyItem; locale: Locale; index: number }) {
   const isZh = locale === 'zh';
   const { isPlaying, play } = useAudio(item.dutch);
   const [isExpanded, setIsExpanded] = useState(false);

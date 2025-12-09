@@ -45,7 +45,10 @@
    ```bash
    git push origin my-new-feature
    ```
-6. **提交 Pull Request (PR)**：回到我们的仓库页面，点击 "Compare & pull request"。
+6. **提交 Pull Request (PR)**：
+   - 回到我们的仓库页面，点击 "Compare & pull request"。
+   - **重要提示**：请务必将你的 PR 提交到 `dev` 分支（Base repository: `dev`），而不是 `main`。
+   - 所有改动会先合并到 `dev` 分支进行测试，确认稳定后才会发布到生产环境。
 
 ### 行为准则
 
@@ -96,7 +99,10 @@ You can contribute in several ways:
    ```bash
    git push origin my-new-feature
    ```
-6. **Submit a Pull Request (PR)**: Go back to our repo page and click "Compare & pull request".
+6. **Submit a Pull Request (PR)**:
+   - Go back to our repo page and click "Compare & pull request".
+   - **Important**: Please ensure your PR targets the `dev` branch (Base repository: `dev`), not `main`.
+   - All changes are merged into `dev` first for testing and will only be released to production after stability is confirmed.
 
 ### Code of Conduct
 

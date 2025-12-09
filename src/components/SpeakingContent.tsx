@@ -73,9 +73,19 @@ function UniversalPhraseCard({
 }) {
   const [playbackSpeed, setPlaybackSpeed] = useState<0.5 | 0.75 | 1.0>(0.75);
   const [isSpeedMenuOpen, setIsSpeedMenuOpen] = useState(false);
+  
+  // Pagination State
+  const [page, setPage] = useState(0);
+  const phrasesPerPage = 5;
+  const totalPages = Math.ceil(group.phrases.length / phrasesPerPage);
+  
+  const currentPhrases = group.phrases.slice(
+    page * phrasesPerPage, 
+    (page + 1) * phrasesPerPage
+  );
 
   return (
-    <div className="group h-full p-6 rounded-2xl border border-slate-100 bg-white shadow-sm hover:shadow-md transition-all hover:border-orange-100 relative">
+    <div className="group h-full p-6 rounded-2xl border border-slate-100 bg-white shadow-sm hover:shadow-md transition-all hover:border-orange-100 relative flex flex-col">
       <div className="mb-4 pb-3 border-b border-slate-50 flex justify-between items-start">
         <div>
             <h3 className="text-lg font-bold text-slate-900">
@@ -115,9 +125,10 @@ function UniversalPhraseCard({
             )}
         </div>
       </div>
+      
       <ul className="space-y-3">
-        {group.phrases.map((phrase, idx) => (
-          <li key={idx} className="group/item flex items-start justify-between gap-3">
+        {currentPhrases.map((phrase, idx) => (
+          <li key={`${page}-${idx}`} className="group/item flex items-start justify-between gap-3 animate-in fade-in slide-in-from-right-4 duration-300">
             <div className="flex-1">
               <p className="font-semibold text-slate-800 text-sm group-hover/item:text-[var(--primary)] transition-colors">
                 {phrase.dutch}
@@ -141,6 +152,38 @@ function UniversalPhraseCard({
           </li>
         ))}
       </ul>
+
+      {/* Pagination Controls */}
+      {totalPages > 1 && (
+        <div className="mt-auto pt-3 border-t border-slate-50 flex justify-between items-center">
+            <button
+                onClick={() => setPage((p) => Math.max(0, p - 1))}
+                disabled={page === 0}
+                className="p-1 rounded-full text-slate-400 hover:text-[var(--primary)] hover:bg-orange-50 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-slate-400 transition-colors"
+            >
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <div className="flex gap-1.5">
+                {Array.from({ length: totalPages }).map((_, i) => (
+                    <button
+                        key={i}
+                        onClick={() => setPage(i)}
+                        className={`
+                            w-2 h-2 rounded-full transition-all
+                            ${page === i ? "bg-[var(--primary)] scale-110" : "bg-slate-200 hover:bg-slate-300"}
+                        `}
+                    />
+                ))}
+            </div>
+            <button
+                onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
+                disabled={page === totalPages - 1}
+                className="p-1 rounded-full text-slate-400 hover:text-[var(--primary)] hover:bg-orange-50 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-slate-400 transition-colors"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+        </div>
+      )}
     </div>
   );
 }
@@ -154,13 +197,27 @@ export function SpeakingContent({ locale }: Props) {
   // Ensure we have a valid initial state from the (possibly updated) speakingThemes
   const initialTopic = speakingThemes.length > 0 ? speakingThemes[0].id : "type1_qa";
   const [activeTopic, setActiveTopic] = useState(initialTopic);
+  const [questionPage, setQuestionPage] = useState(0);
 
   const filteredQuestions = speakingQuestions.filter(
     (item) => item.topic === activeTopic,
   );
   
+  const QUESTIONS_PER_PAGE = 4;
+  const totalQuestionPages = Math.ceil(filteredQuestions.length / QUESTIONS_PER_PAGE);
+  const currentQuestions = filteredQuestions.slice(
+    questionPage * QUESTIONS_PER_PAGE,
+    (questionPage + 1) * QUESTIONS_PER_PAGE
+  );
+  
   const activeTheme = speakingThemes.find((theme) => theme.id === activeTopic) ?? speakingThemes[0];
   const isWideLayout = ["type3_comparison", "type4_story"].includes(activeTopic);
+
+  // Reset page when topic changes
+  const handleTopicChange = (topicId: string) => {
+    setActiveTopic(topicId as any);
+    setQuestionPage(0);
+  };
 
   return (
     <div className="space-y-16 pb-20">
@@ -297,7 +354,7 @@ export function SpeakingContent({ locale }: Props) {
                     return (
                         <button
                             key={theme.id}
-                            onClick={() => setActiveTopic(theme.id)}
+                            onClick={() => handleTopicChange(theme.id)}
                             className={`
                                 relative px-4 py-2 rounded-full text-sm font-bold transition-all whitespace-nowrap
                                 ${isActive ? "text-white" : "text-slate-500 hover:text-slate-800"}
@@ -315,7 +372,7 @@ export function SpeakingContent({ locale }: Props) {
 
         {/* Questions Grid */}
         <div className={`grid gap-6 ${isWideLayout ? "w-full grid-cols-1" : "md:grid-cols-2"}`}>
-            {filteredQuestions.map((question) => (
+            {currentQuestions.map((question) => (
                 <SpeakingPracticeCard 
                     key={question.id} 
                     question={question} 
@@ -323,6 +380,40 @@ export function SpeakingContent({ locale }: Props) {
                 />
             ))}
         </div>
+
+        {/* Question Pagination */}
+        {totalQuestionPages > 1 && (
+            <div className="mt-10 flex justify-center items-center gap-4">
+                 <button
+                    onClick={() => setQuestionPage((p) => Math.max(0, p - 1))}
+                    disabled={questionPage === 0}
+                    className="p-2 rounded-full text-slate-400 bg-white border border-slate-100 hover:text-[var(--primary)] hover:border-orange-100 disabled:opacity-30 disabled:hover:text-slate-400 disabled:hover:border-slate-100 transition-all"
+                >
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                
+                <div className="flex gap-2">
+                    {Array.from({ length: totalQuestionPages }).map((_, i) => (
+                        <button
+                            key={i}
+                            onClick={() => setQuestionPage(i)}
+                            className={`
+                                w-2.5 h-2.5 rounded-full transition-all
+                                ${questionPage === i ? "bg-[var(--primary)] scale-125" : "bg-slate-200 hover:bg-slate-300"}
+                            `}
+                        />
+                    ))}
+                </div>
+
+                <button
+                    onClick={() => setQuestionPage((p) => Math.min(totalQuestionPages - 1, p + 1))}
+                    disabled={questionPage === totalQuestionPages - 1}
+                    className="p-2 rounded-full text-slate-400 bg-white border border-slate-100 hover:text-[var(--primary)] hover:border-orange-100 disabled:opacity-30 disabled:hover:text-slate-400 disabled:hover:border-slate-100 transition-all"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+        )}
       </section>
     </div>
   );

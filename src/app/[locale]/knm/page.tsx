@@ -185,8 +185,8 @@ export default async function KnmPage({
         </p>
         <p>
           {isZh
-            ? "考试包含选择题和短答题，题干通常以日常生活情境出现，考察你理解荷兰制度与公共服务的能力。"
-            : "The exam mixes multiple-choice and short-open questions framed around everyday civic scenarios so you demonstrate understanding of Dutch institutions and services."}
+            ? "考试题型为单选题，一共有40道题，题干通常以日常生活情境出现，考察你理解荷兰制度与公共服务的能力。考完一般3天出成绩。"
+            : "The exam contains 40 single-choice questions framed around everyday civic scenarios so you demonstrate understanding of Dutch institutions and services. It usually takes 3 days to get the results."}
         </p>
         <p>
           {isZh

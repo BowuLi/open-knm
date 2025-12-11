@@ -130,8 +130,8 @@ export const examOverviewCards: OverviewCard[] = [
     },
     detail: {
       nl: "1. Vragen beantwoorden. 2. Foto beschrijven. 3. Keuze maken (vergelijken). 4. Verhaal vertellen.",
-      zh: "1. 回答问题。 2. 描述图片。 3. 对比选择。 4. 看图讲故事。",
-      en: "1. Answer questions. 2. Describe photo. 3. Make a choice. 4. Tell a story.",
+      zh: "1. 回答问题。 2. 描述图片。 3. 对比选择。 4. 看图讲故事。 每种题型4题，共16题，总计35分钟。",
+      en: "1. Answer questions. 2. Describe photo. 3. Make a choice. 4. Tell a story. Each task type has 4 questions, totaling 16 questions and 35 minutes.",
     },
     note: {
       nl: "Gebruik eenvoudige zinnen.",

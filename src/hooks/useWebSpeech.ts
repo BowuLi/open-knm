@@ -90,6 +90,18 @@ export function useWebSpeech() {
       synthesisRef.current.cancel();
 
       const utterance = new SpeechSynthesisUtterance(text);
+      
+      // Explicitly try to find a voice for the requested language
+      // This ensures we get a Dutch voice instead of the system default (which might be English)
+      const voices = synthesisRef.current.getVoices();
+      const targetVoice = 
+        voices.find(v => v.lang === lang) || 
+        voices.find(v => v.lang.startsWith(lang.split('-')[0]));
+      
+      if (targetVoice) {
+        utterance.voice = targetVoice;
+      }
+
       utterance.lang = lang;
       utterance.rate = rate; // Use the provided rate
       synthesisRef.current.speak(utterance);

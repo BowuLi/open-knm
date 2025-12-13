@@ -21,12 +21,19 @@ function useAudio(text: string) {
     const utterance = new SpeechSynthesisUtterance(text);
     const voices = window.speechSynthesis.getVoices();
     // Try to find a Dutch voice
-    const dutchVoice = voices.find(v => v.lang.includes('nl'));
+    // Explicitly try to find a voice for the requested language
+    // This ensures we get a Dutch voice instead of the system default (which might be English)
+    const lang = 'nl-NL';
+    const dutchVoice = 
+      voices.find(v => v.lang === lang) || 
+      voices.find(v => v.lang.startsWith(lang.split('-')[0])) ||
+      voices.find(v => v.lang.includes('nl')); // Fallback to any Dutch voice
+      
     if (dutchVoice) {
       utterance.voice = dutchVoice;
     }
     
-    utterance.lang = 'nl-NL';
+    utterance.lang = lang;
     utterance.rate = 0.9;
 
     // @ts-expect-error - attaching to window to prevent GC

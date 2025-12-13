@@ -3,6 +3,7 @@
 import React, { useState, useMemo } from "react";
 import { Locale, uiTexts } from "@/lib/uiTexts";
 import { vocabularyList, VocabularyItem } from "@/data/vocabulary";
+import { TTSDisclaimer } from "@/components/TTSDisclaimer";
 
 type ViewMode = 'card' | 'list';
 
@@ -112,6 +113,10 @@ export default function VocabularyList({ locale }: { locale: Locale }) {
         <p className="text-lg text-slate-600 leading-relaxed">
           {texts.description}
         </p>
+      </div>
+
+      <div className="max-w-2xl mx-auto w-full">
+        <TTSDisclaimer locale={locale} />
       </div>
 
       {/* Controls Section */}

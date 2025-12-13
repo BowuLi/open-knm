@@ -115,6 +115,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                 
                 <div className="bg-white/5 rounded-2xl p-6 backdrop-blur-sm border border-white/10">
                     <a href="https://github.com/xvllinihao/open-knm/graphs/contributors" target="_blank" rel="noopener noreferrer" className="block hover:opacity-80 transition-opacity">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img 
                             src="https://contrib.rocks/image?repo=xvllinihao/open-knm" 
                             alt="Contributors" 

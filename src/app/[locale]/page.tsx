@@ -19,7 +19,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
         <section className="flex-1 text-center lg:text-left space-y-6 max-w-3xl lg:max-w-none">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-orange-600 text-xs font-bold uppercase tracking-wider">
             <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-            {isZh ? '免费 · 开源 · 荷兰指南' : 'Free · Open Source · NL Guide'}
+            {isZh ? '免费 · 开源 · 备考冲刺' : 'Free · Open Source · Exam Fast Track'}
           </div>
           
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter text-slate-900 leading-[1.1]">
@@ -28,14 +28,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
           
           <p className="text-xl sm:text-2xl text-slate-600 leading-relaxed font-light">
             {isZh 
-              ? '你的荷兰融入考试 (Inburgering) 通关指南。' 
-              : 'Your essential guide to the Dutch Civic Integration exam.'}
+              ? '只讲考点，不讲废话。你的 KNM 考试极速通关指南。' 
+              : 'The no-nonsense guide to passing your KNM exam. Fast.'}
           </p>
           
           <p className="text-base sm:text-lg text-slate-500 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
             {isZh 
-              ? '这是一个免费开源的项目。不仅为你梳理 KNM 考试核心考点，更助你真正读懂荷兰社会规则，让备考与生活都更从容。' 
-              : 'An open-source knowledge base designed to help you navigate Dutch society. We provide the key insights you need to pass the KNM exam and settle in with confidence.'}
+              ? '我们不是一本面面俱到的百科全书，而是一份精准的考前冲刺笔记。汇集高频词汇、核心考点与模拟练习，助你节省时间，直击 Inburgering 考试核心。' 
+              : 'We are not an encyclopedia. We are your exam cheat sheet. Curated summaries, essential vocabulary, and focused practice to help you save time and ace the Knowledge of Dutch Society (KNM) exam.'}
           </p>
 
           <div className="flex items-center justify-center lg:justify-start gap-4 pt-4">

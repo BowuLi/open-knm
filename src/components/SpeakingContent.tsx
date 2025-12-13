@@ -13,6 +13,7 @@ import {
   universalPhrases,
 } from "@/data/speaking";
 import { SpeakingPracticeCard } from "@/components/SpeakingPracticeCard";
+import { TTSDisclaimer } from "@/components/TTSDisclaimer";
 
 // --- Icons ---
 const PlayIcon = () => (
@@ -269,6 +270,11 @@ export function SpeakingContent({ locale }: Props) {
           </div>
         </div>
       </section>
+
+      {/* TTS Disclaimer */}
+      <div className="max-w-3xl mx-auto w-full px-4">
+        <TTSDisclaimer locale={locale} />
+      </div>
 
       {/* 2. EXAM INTEL (Overview Cards) */}
       <section>

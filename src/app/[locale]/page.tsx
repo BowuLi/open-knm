@@ -19,7 +19,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
         <section className="flex-1 text-center lg:text-left space-y-6 max-w-3xl lg:max-w-none">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-orange-600 text-xs font-bold uppercase tracking-wider">
             <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-            {isZh ? '免费 · 开源 · 备考冲刺' : 'Free · Open Source · Exam Fast Track'}
+            {isZh ? '免费 · 开源 · 社区驱动' : 'Free · Open Source · Community Driven'}
           </div>
           
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter text-slate-900 leading-[1.1]">
@@ -28,14 +28,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
           
           <p className="text-xl sm:text-2xl text-slate-600 leading-relaxed font-light">
             {isZh 
-              ? '只讲考点，不讲废话。你的 KNM 考试极速通关指南。' 
-              : 'The no-nonsense guide to passing your KNM exam. Fast.'}
+              ? '轻松备考，从容生活。你的荷兰融入考试开源指南。' 
+              : 'Pass the exam. Settle in. Your open-source guide to Dutch civic integration.'}
           </p>
           
           <p className="text-base sm:text-lg text-slate-500 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
             {isZh 
-              ? '我们不是一本面面俱到的百科全书，而是一份精准的考前冲刺笔记。汇集高频词汇、核心考点与模拟练习，助你节省时间，直击 Inburgering 考试核心。' 
-              : 'We are not an encyclopedia. We are your exam cheat sheet. Curated summaries, essential vocabulary, and focused practice to help you save time and ace the Knowledge of Dutch Society (KNM) exam.'}
+              ? '汇集了社区贡献的核心考点、高频词汇和实用练习，这里有一份更轻量的备考方案，帮你用最轻松的方式通过 Inburgering 考试，更快适应荷兰生活。' 
+              : 'Curated by the community, our essential topics, vocabulary, and practice questions offer a lighter way to prepare. A simpler path to passing the Inburgering exam and feeling at home in the Netherlands.'}
           </p>
 
           <div className="flex items-center justify-center lg:justify-start gap-4 pt-4">

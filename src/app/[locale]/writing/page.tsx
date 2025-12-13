@@ -15,6 +15,9 @@ const writingPageMeta: Record<Locale, { title: string; description: string; keyw
       "writing mock exam",
       "learn Dutch writing",
       "Inburgering exam A2",
+      "Dutch writing exam examples",
+      "schrijven examen inburgering",
+      "Dutch formal letter",
     ],
   },
   zh: {
@@ -28,6 +31,9 @@ const writingPageMeta: Record<Locale, { title: string; description: string; keyw
       "荷兰语写作模拟",
       "荷兰语写作速成",
       "荷兰语语法",
+      "荷兰语写作范文",
+      "荷兰语邮件格式",
+      "Inburgering 写作真题",
     ],
   },
 };
@@ -76,3 +82,4 @@ export default async function WritingPage({
   const { locale } = await params;
   return <WritingContent locale={locale} />;
 }
+

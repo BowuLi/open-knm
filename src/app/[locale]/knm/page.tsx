@@ -23,6 +23,11 @@ const knmPageMeta: Record<
       "KNM study guide",
       "Inburgering resources",
       "Dutch society",
+      "Dutch history for exam",
+      "Dutch politics explained",
+      "Dutch health insurance system",
+      "Dutch education system",
+      "Kennis van de Nederlandse Maatschappij",
     ],
   },
   zh: {
@@ -35,6 +40,11 @@ const knmPageMeta: Record<
       "荷兰社会知识",
       "Inburgering 复习",
       "荷兰 KNM 学习",
+      "荷兰历史考点",
+      "荷兰政治制度",
+      "荷兰医疗保险",
+      "荷兰教育体系",
+      "KNM 考试题目",
     ],
   },
 };

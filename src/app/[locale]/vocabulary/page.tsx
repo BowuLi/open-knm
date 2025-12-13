@@ -20,8 +20,8 @@ export async function generateMetadata({
       ? "掌握500+个荷兰语A2核心词汇，涵盖日常生活、融入考试(Inburgering)、工作和住房。包含免费真人发音、例句和中文解释。助你轻松通过荷兰语A2考试。"
       : "Master 300+ essential Dutch words for daily life, civic integration (inburgering) exams, work, and housing. Includes free audio pronunciations, examples and translations.",
     keywords: isZh
-      ? ["免费荷兰语A2词汇", "荷兰语A2学习", "融入考试词汇", "Inburgering单词", "荷兰语入门", "荷兰语单词表", "荷兰生活词汇", "免费荷兰语学习", "荷兰语自学"]
-      : ["Free Dutch A2 vocabulary", "Learn Dutch A2", "Inburgering vocabulary", "Dutch A2 words", "Dutch vocabulary list", "Netherlands A2 exam", "Free Dutch learning"],
+      ? ["免费荷兰语A2词汇", "荷兰语A2学习", "融入考试词汇", "Inburgering单词", "荷兰语入门", "荷兰语单词表", "荷兰生活词汇", "免费荷兰语学习", "荷兰语自学", "荷兰语常用词", "Inburgering 词汇下载", "荷兰语词汇 PDF"]
+      : ["Free Dutch A2 vocabulary", "Learn Dutch A2", "Inburgering vocabulary", "Dutch A2 words", "Dutch vocabulary list", "Netherlands A2 exam", "Free Dutch learning", "Dutch common words", "Inburgering woordenlijst", "Dutch vocabulary PDF"],
     openGraph: {
       title: isZh 
         ? "免费荷兰语A2核心词汇表 (带发音)" 

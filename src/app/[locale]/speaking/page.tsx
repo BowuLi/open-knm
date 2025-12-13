@@ -17,6 +17,9 @@ const speakingPageMeta: Record<Locale, { title: string; description: string; key
       "learn Dutch speaking",
       "Inburgering part 1",
       "Inburgering part 2",
+      "Dutch speaking exam examples",
+      "spreken examen inburgering",
+      "picture description dutch exam",
     ],
   },
   zh: {
@@ -30,6 +33,8 @@ const speakingPageMeta: Record<Locale, { title: string; description: string; key
       "荷兰语口语模拟",
       "荷兰语看图说话",
       "荷兰语口语题库",
+      "荷兰语口语考试真题",
+      "看图说话技巧",
     ],
   },
 };

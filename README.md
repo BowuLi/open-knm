@@ -16,7 +16,10 @@
 
 **Open KNM** 是一个开源、免费的荷兰融入考试备考指南。
 
-**项目初心**：这个项目最初只是我个人备考 **KNM (Kennis van de Nederlandse Maatschappij)** 时的私人笔记。在备考过程中，我发现市面上的资料要么过于零散，要么价格昂贵且内容陈旧。于是，我决定将这份涵盖了核心考点、高频词汇和模拟练习的“私房笔记”整理并开源，逐渐演变成如今这个帮助大家快速准备整个融入考试（Inburgering）的知识库。
+**项目初心**：
+> "从个人笔记到开源指南，陪你一起通过融入考试。"
+
+这个项目最初只是我个人备考 **KNM (Kennis van de Nederlandse Maatschappij)** 时的私人笔记。随着内容的丰富，我决定将它开源，希望能帮助每一位像我一样在荷兰奋斗的新朋友，少走弯路，从容应考。
 
 我们的目标很简单：为所有在荷兰生活的新移民、留学生和外籍人士提供一个清晰、准确且温暖的备考助手。不仅仅是为了通过考试，更是为了帮助大家真正读懂荷兰社会规则，让在这片土地上的生活更加从容。
 
@@ -71,7 +74,10 @@
 
 **Open KNM** is an open-source, free study guide for the Dutch civic integration exam.
 
-**Origin Story**: This project started as my personal study notes when I was preparing for the **KNM (Kennis van de Nederlandse Maatschappij)** exam. I found existing materials either too scattered, expensive, or outdated. So, I decided to polish and open-source my "private notes"—covering core topics, essential vocabulary, and practice questions. Over time, it evolved into a comprehensive knowledge base to help everyone fast-track their preparation for the entire Inburgering exam.
+**Origin Story**:
+> "From personal notes to an open-source guide, accompanying you to pass the integration exam."
+
+This project started as my private study notes for the **KNM (Kennis van de Nederlandse Maatschappij)** exam. As the content grew, I decided to open-source it. My hope is to help every newcomer striving in the Netherlands to avoid common pitfalls and face the exam with confidence.
 
 Our goal is simple: to provide a clear, accurate, and welcoming study companion for all newcomers, students, and expats in the Netherlands. It's not just about passing the exam; it's about truly understanding Dutch society so you can live here with confidence.
 

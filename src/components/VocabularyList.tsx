@@ -448,6 +448,7 @@ export default function VocabularyList({ locale }: { locale: Locale }) {
 
 function VocabularyCard({ item, locale }: { item: VocabularyItem; locale: Locale }) {
   const isZh = locale === 'zh';
+  const texts = uiTexts[locale].vocabulary;
   const { isPlaying, play } = useAudio(item.dutch);
   
   return (
@@ -459,9 +460,14 @@ function VocabularyCard({ item, locale }: { item: VocabularyItem; locale: Locale
         <span className="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium bg-orange-50 text-orange-700 border border-orange-100">
           {item.level}
         </span>
-        <span className="text-slate-400 text-xs font-mono uppercase tracking-wider">
-          {item.category}
-        </span>
+        <div className="flex flex-col items-end gap-1">
+          <span className="text-slate-400 text-xs font-mono uppercase tracking-wider">
+            {item.category}
+          </span>
+          <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-medium bg-blue-50 text-blue-700 border border-blue-100">
+            {texts.partOfSpeech[item.partOfSpeech]}
+          </span>
+        </div>
       </div>
 
       <div className="mb-4">
@@ -517,6 +523,7 @@ function VocabularyListItem({
   hideTranslations: boolean;
 }) {
   const isZh = locale === 'zh';
+  const texts = uiTexts[locale].vocabulary;
   const { isPlaying, play } = useAudio(item.dutch);
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -553,6 +560,9 @@ function VocabularyListItem({
           <span className="hidden sm:inline-block px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 text-slate-500">
             {item.level}
           </span>
+          <span className="hidden sm:inline-block px-2 py-0.5 rounded text-[10px] font-medium bg-blue-50 text-blue-700 border border-blue-100">
+            {texts.partOfSpeech[item.partOfSpeech]}
+          </span>
           <button
             onClick={play}
             disabled={isPlaying}
@@ -585,6 +595,7 @@ function VocabularyListItem({
           <div className="mb-2 flex items-center gap-2">
              <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">{isZh ? '笔记' : 'Note'}</span>
              <span className="text-xs text-slate-400 px-1.5 py-0.5 bg-white rounded border border-slate-200">{item.category}</span>
+             <span className="text-xs text-slate-400 px-1.5 py-0.5 bg-blue-50 rounded border border-blue-100">{texts.partOfSpeech[item.partOfSpeech]}</span>
           </div>
           {item.notes[locale]}
         </div>

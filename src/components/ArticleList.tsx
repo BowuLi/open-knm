@@ -14,9 +14,9 @@ export function ArticleList({ articles, locale }: { articles: Article[]; locale:
     try {
       const raw = localStorage.getItem("knm-read-history");
       if (raw) {
-        setReadHistory(JSON.parse(raw));
+        setTimeout(() => setReadHistory(JSON.parse(raw)), 0);
       }
-    } catch (e) {
+    } catch {
       // ignore
     }
   }, []);

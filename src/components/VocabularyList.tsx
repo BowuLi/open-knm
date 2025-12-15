@@ -207,8 +207,10 @@ export default function VocabularyList({ locale }: { locale: Locale }) {
           parsed.page !== 1 ||
           parsed.viewMode !== "card"
         ) {
-           setPendingBookmark(parsed);
-           setIsResumeVisible(true);
+           setTimeout(() => {
+             setPendingBookmark(parsed);
+             setIsResumeVisible(true);
+           }, 0);
         }
       }
     } catch (error) {

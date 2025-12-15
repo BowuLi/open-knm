@@ -27,7 +27,7 @@ export function KnmResumeCheck({ locale }: { locale: Locale }) {
 
       const parsed: BookmarkData = JSON.parse(raw);
       if (parsed?.slug && parsed?.locale) {
-        setBookmark(parsed);
+        setTimeout(() => setBookmark(parsed), 0);
       }
     } catch (error) {
       console.error("Failed to read KNM bookmark:", error);

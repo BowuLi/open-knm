@@ -18,20 +18,45 @@ export function KnmResumeCheck({ locale }: { locale: Locale }) {
   const router = useRouter();
   const [bookmark, setBookmark] = useState<BookmarkData | null>(null);
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
+  const checkBookmark = () => {
     try {
       const raw = window.localStorage.getItem(STORAGE_KEY);
       if (!raw) return;
 
       const parsed: BookmarkData = JSON.parse(raw);
       if (parsed?.slug && parsed?.locale) {
+        // Check if we just came from an article (within last 1s)
+        const lastExit = window.sessionStorage.getItem("knm-last-article-exit");
+        const now = Date.now();
+        // If we just left an article, don't show the prompt
+        if (lastExit && now - Number(lastExit) < 1000) {
+          return;
+        }
+        
         setTimeout(() => setBookmark(parsed), 0);
       }
     } catch (error) {
       console.error("Failed to read KNM bookmark:", error);
     }
+  };
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    // Initial check
+    checkBookmark();
+
+    // Re-check when returning to tab
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        checkBookmark();
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
   }, []);
 
   if (!bookmark) return null;

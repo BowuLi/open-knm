@@ -42,6 +42,17 @@ export function ArticleTracker({ slug, title, locale }: ArticleTrackerProps) {
     } catch (error) {
       console.error("Failed to save KNM bookmark:", error);
     }
+
+    return () => {
+      try {
+        window.sessionStorage.setItem(
+          "knm-last-article-exit",
+          Date.now().toString()
+        );
+      } catch {
+        // ignore
+      }
+    };
   }, [slug, title, locale]);
 
   return null;

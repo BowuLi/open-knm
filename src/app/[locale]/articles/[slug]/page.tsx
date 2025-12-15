@@ -7,6 +7,7 @@ import type { ComponentType } from "react";
 import { SITE_NAME, SITE_URL, absoluteUrl } from "@/lib/siteConfig";
 import { ArticleNavigation } from "@/components/ArticleNavigation";
 import { LegalDisclaimer } from "@/components/content/ArticleComponents";
+import { ArticleTracker } from "@/components/content/ArticleTracker";
 
 import KnmHistoryZh from "@/data/articles/knm-history-william-of-orange.zh.mdx";
 import KnmHistoryEn from "@/data/articles/knm-history-william-of-orange.en.mdx";
@@ -217,9 +218,11 @@ export default async function ArticlePage({ params }: Props) {
   const { prev, next } = getAdjacentArticles(slug);
 
   return (
-    <article className="max-w-3xl mx-auto py-8 sm:py-12 space-y-8">
-      <script
-        type="application/ld+json"
+    <>
+      <ArticleTracker slug={slug} title={article.titles[locale]} locale={locale} />
+      <article className="max-w-3xl mx-auto py-8 sm:py-12 space-y-8">
+        <script
+          type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
@@ -291,6 +294,7 @@ export default async function ArticlePage({ params }: Props) {
       </div>
 
       <ArticleNavigation prev={prev} next={next} locale={locale} />
-    </article>
+      </article>
+    </>
   );
 }

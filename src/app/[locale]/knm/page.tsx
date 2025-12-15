@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Locale } from "@/lib/i18n";
 import { getArticlesByCategory } from "@/lib/articles";
 import { ArticleList } from "@/components/ArticleList";
+import { KnmResumeCheck } from "@/components/content/KnmResumeCheck";
 import Link from "next/link";
 import { absoluteUrl } from "@/lib/siteConfig";
 
@@ -137,6 +138,7 @@ export default async function KnmPage({
 
   return (
     <div className="space-y-8">
+      <KnmResumeCheck locale={locale} />
       <div className="space-y-4 max-w-3xl">
         <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
           {isZh ? "KNM 考试专区" : "KNM Exam Zone"}

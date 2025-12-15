@@ -32,6 +32,12 @@ export type VocabularyTexts = {
     health: string;
     admin: string;
   };
+  bookmarkPrompt: {
+    resume: string;
+    continueReading: string;
+    continueStudying: string;
+    dismiss: string;
+  };
 };
 
 export type UiTexts = {
@@ -141,6 +147,12 @@ export const uiTexts: Record<Locale, UiTexts> = {
       },
       hideTranslations: "隐藏释义",
       showTranslations: "显示释义",
+      bookmarkPrompt: {
+        resume: "上次看到",
+        continueReading: "继续阅读该篇",
+        continueStudying: "继续浏览该模式",
+        dismiss: "不，谢谢",
+      },
     },
     disclaimer: {
       title: "免责声明",
@@ -214,6 +226,12 @@ export const uiTexts: Record<Locale, UiTexts> = {
       },
       hideTranslations: "Hide translations",
       showTranslations: "Show translations",
+      bookmarkPrompt: {
+        resume: "Last visited",
+        continueReading: "Resume this article",
+        continueStudying: "Return to this mode",
+        dismiss: "No thanks",
+      },
     },
     disclaimer: {
       title: "Disclaimer",

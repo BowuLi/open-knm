@@ -4,8 +4,18 @@ import React, { useState, useMemo, useRef, useEffect } from "react";
 import { Locale, uiTexts } from "@/lib/uiTexts";
 import { vocabularyList, VocabularyItem } from "@/data/vocabulary";
 import { TTSDisclaimer } from "@/components/TTSDisclaimer";
+import { ResumePrompt } from "@/components/ResumePrompt";
 
 type ViewMode = 'card' | 'list';
+
+type VocabBookmark = {
+  category: string;
+  page: number;
+  viewMode: ViewMode;
+  updatedAt: number;
+};
+
+const STORAGE_KEY = "vocab-bookmark";
 
 // Custom hook for audio playback
 function useAudio(text: string) {
@@ -134,6 +144,8 @@ export default function VocabularyList({ locale }: { locale: Locale }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [viewMode, setViewMode] = useState<ViewMode>('card');
   const [hideTranslations, setHideTranslations] = useState(false);
+  const [pendingBookmark, setPendingBookmark] = useState<VocabBookmark | null>(null);
+  const [isResumeVisible, setIsResumeVisible] = useState(false);
 
   const itemsPerPage = viewMode === 'card' ? 6 : 50;
 
@@ -172,8 +184,88 @@ export default function VocabularyList({ locale }: { locale: Locale }) {
     setCurrentPage(1);
   };
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      
+      const parsed: VocabBookmark = JSON.parse(raw);
+      if (
+        parsed &&
+        parsed.category &&
+        typeof parsed.page === "number" &&
+        (parsed.viewMode === "card" || parsed.viewMode === "list")
+      ) {
+        // Only show if different from default or current (if current is default)
+        // Actually, just show if valid. But checking against "all" and page 1 might be nice.
+        // But user might want to resume even if they just left.
+        // Let's check if it matches current state? 
+        // Current state is initial (all, 1, card).
+        if (
+          parsed.category !== "all" ||
+          parsed.page !== 1 ||
+          parsed.viewMode !== "card"
+        ) {
+           setTimeout(() => {
+             setPendingBookmark(parsed);
+             setIsResumeVisible(true);
+           }, 0);
+        }
+      }
+    } catch (error) {
+      console.error("Failed to read vocabulary bookmark:", error);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const payload: VocabBookmark = {
+      category: activeCategory,
+      page: currentPage,
+      viewMode,
+      updatedAt: Date.now(),
+    };
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+    } catch (error) {
+      console.error("Failed to save vocabulary bookmark:", error);
+    }
+  }, [activeCategory, currentPage, viewMode]);
+
+  const handleResume = () => {
+    if (!pendingBookmark) return;
+    setActiveCategory(pendingBookmark.category);
+    setViewMode(pendingBookmark.viewMode);
+    setCurrentPage(pendingBookmark.page);
+    setIsResumeVisible(false);
+    setPendingBookmark(null);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleDismissResume = () => {
+    setIsResumeVisible(false);
+  };
+
   return (
     <div className="space-y-12">
+      {pendingBookmark && isResumeVisible && (
+        <ResumePrompt
+          message={`${texts.bookmarkPrompt.resume} “${
+            categories.find((c) => c.id === pendingBookmark.category)?.label || pendingBookmark.category
+          }” - ${texts.viewMode[pendingBookmark.viewMode]} ${
+            pendingBookmark.page > 1
+              ? locale === "zh"
+                ? `(第 ${pendingBookmark.page} 页)`
+                : `(Page ${pendingBookmark.page})`
+              : ""
+          }`}
+          confirmText={texts.bookmarkPrompt.continueStudying}
+          dismissText={texts.bookmarkPrompt.dismiss}
+          onConfirm={handleResume}
+          onDismiss={handleDismissResume}
+        />
+      )}
       {/* Header */}
       <div className="text-center space-y-4 max-w-2xl mx-auto">
         <h1 className="text-4xl font-black tracking-tight text-slate-900 sm:text-5xl">
@@ -220,7 +312,7 @@ export default function VocabularyList({ locale }: { locale: Locale }) {
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
             </svg>
-            <span className="hidden sm:inline">{texts.viewMode.card}</span>
+            <span className="inline">{texts.viewMode.card}</span>
           </button>
           <button
             onClick={() => handleViewModeChange('list')}
@@ -233,7 +325,7 @@ export default function VocabularyList({ locale }: { locale: Locale }) {
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-            <span className="hidden sm:inline">{texts.viewMode.list}</span>
+            <span className="inline">{texts.viewMode.list}</span>
           </button>
 
           {/* Divider and Hide Option (List Mode Only) */}

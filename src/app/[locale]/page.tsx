@@ -1,6 +1,7 @@
 import { Locale, uiTexts, isLocale } from "@/lib/uiTexts";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { changelogData } from "@/data/changelog";
 
 export default async function HomePage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
@@ -11,6 +12,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
 
   const isZh = locale === 'zh';
   const { assistant } = uiTexts[locale];
+  const latestUpdate = changelogData[0];
 
   return (
     <div className="flex flex-col gap-12 lg:gap-20 h-full">
@@ -51,6 +53,23 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
              >
                {isZh ? '高频词汇' : 'Vocabulary'}
              </Link>
+          </div>
+
+          {/* Latest Update */}
+          <div className="pt-8 border-t border-slate-100 mt-8">
+            <Link href={`/${locale}/changelog`} className="group block">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="inline-flex items-center justify-center px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-600 uppercase tracking-wide">
+                  {isZh ? "最新更新" : "Latest Update"}
+                </span>
+                <span className="text-xs font-medium text-slate-400">
+                  {latestUpdate.date}
+                </span>
+              </div>
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-[var(--primary)] transition-colors">
+                {latestUpdate.title[isZh ? "zh" : "en"] || latestUpdate.title["zh"]} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+              </h3>
+            </Link>
           </div>
         </section>
 
